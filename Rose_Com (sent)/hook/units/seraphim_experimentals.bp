@@ -1,0 +1,257 @@
+-- Ythotha ----------------------------------------------------------------------------------------------------------
+#I always thought that this was a pretty cool experimental, bu i think its first stage can be a little weaker because
+# of the amazing base/defense ruining power of the second phase. Changes similar to the GC. Note that i switched the
+# power of the eye laser and the right arm cannon to match their apparent power better with their actual power.
+UnitBlueprint { Merge = true, BlueprintId = "xsl0401", #Ythotha Experimental Assault Bot
+  Categories = {
+    'PRODUCTFA',
+    'SELECTABLE',
+    'BUILTBYTIER3COMMANDER',
+    'BUILTBYTIER3ENGINEER',
+    'SERAPHIM',
+    'MOBILE',
+    'LAND',
+    'DIRECTFIRE',
+    'EXPERIMENTAL',
+    'NEEDMOBILEBUILD',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    'OVERLAYDIRECTFIRE',
+    'OVERLAYANTIAIR',
+    #'DRAGBUILD',
+    'SHOWATTACKRETICLE',
+    'SORTDEFENSE', #Ianz
+  },
+  Defense = {
+    Health = 84000, #67000
+    MaxHealth = 84000,
+  },
+  Display = {
+    AnimationDeath = {
+      {
+        AnimationRateMax = 0.75, #1
+        AnimationRateMin = 0.75, #1
+      },
+      {
+        AnimationRateMax = 0.75, #1
+        AnimationRateMin = 0.75, #1
+      },
+    },
+    AnimationWalkRate = 0.825, #1.1 #.66
+    MovementEffects = {
+      Land = {
+        Footfall = {
+          Bones = {
+            {
+              Tread = {
+                TreadMarksSizeX = 1.36, #1.7
+                TreadMarksSizeZ = 1.36, #1.7
+                TreadOffset = {  -0.8, 0, 1.9,  }, #{-1,0,2,},
+              },
+            },
+            {
+              Tread = {
+                TreadMarksSizeX = 1.36, #1.7
+                TreadMarksSizeZ = 1.36, #1.7
+                TreadOffset = {  0.8, 0, 1.9,  } #{1,0,2,}
+              },
+            },
+          },
+        },
+      },
+    },
+    UniformScale = 0.04, #0.05
+  },
+  Economy = {
+    BuildCostEnergy = 500000, #250000
+    BuildCostMass = 40000, #20000
+    BuildTime = 60000, #15000
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Guard = false, #true
+      RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 2, #Null
+  },
+  Physics = {
+    MaxAcceleration = 0.5, #2.5
+    MaxBrake = 0.5, #2.5
+    MaxSpeed = 1.5, #2.5
+    TurnRadius = 6, #3 #5
+    TurnRate = 25, #40
+  },
+  SizeY = 6.8, #8.5
+  Veteran = {
+    Level1 = 50, #25
+    Level2 = 100, 
+    Level3 = 150,
+    Level4 = 200,
+    Level5 = 250,
+  },
+  Weapon = {
+    { #Experimental Phason Beam Generator
+      Damage = 3600, #8000
+      ProjectileLifetime = 2.76, #(CBF) 5.52
+      MaxRadius = 40, #45
+      MinRadius = 8, #4
+      MuzzleChargeDelay = 2.2, #2.5
+      MuzzleVelocity = 16, #8
+      RateOfFire = 0.3, #0.2
+      TurretYawRange = 45, #35
+    },
+    { #Gatling Plasma Cannon (Left Arm)
+      HeadingArcCenter = -10, #10
+      HeadingArcRange = 55, #40
+      MaxRadius = 40, #45
+      PrefersPrimaryWeaponTarget = false, #true
+      SlavedToBodyArcRange = 55, #30
+      TurretYawRange = 55, #35
+    },
+    { #Heavy Sin Unthe Cannon (Right Arm)
+      Damage = 6000, #1200
+      HeadingArcCenter = 10, #-10
+      HeadingArcRange = 55, #50
+      MaxRadius = 40, #45
+      ProjectileLifetime = 1.0, # (CBF)
+      PrefersPrimaryWeaponTarget = false, #true
+      RateOfFire = 0.2, #0.3
+      SlavedToBodyArcRange = 55, #30
+      TurretYawRange = 55, #35
+    },
+    { #Olaris AA Artillery Cannon
+      Damage = 50, #25
+      DamageRadius = 4, #1.5
+      FiringRandomness = 2.5, #3.5
+      MuzzleVelocity = 30, #20
+      PrefersPrimaryWeaponTarget = false, #nil
+      UseFiringSolutionInsteadOfAimBone = true, #nil
+    },
+    { #Olaris AA Artillery Cannon
+      Damage = 50, #25
+      DamageRadius = 4, #1.5
+      FiringRandomness = 2.5, #3.5
+      MuzzleVelocity = 30, #20
+      PrefersPrimaryWeaponTarget = false, #true
+      UseFiringSolutionInsteadOfAimBone = true, #nil
+    },
+    { #Death Explosion
+    },
+  },
+  Wreckage = {
+    ReclaimTimeMultiplier = 4, #1
+  },
+}
+
+-- Ahwassa ----------------------------------------------------------------------------------------------------------
+#This one is pretty interesting in the fact that i did not change it much. it was very powerful before and i did not
+# really change that much so instead i reduced its anti-air power so that it could be killed.
+UnitBlueprint { Merge = true, BlueprintId = "xsa0402", #Ahwassa Experimental Bomber
+  Air = {
+    AutoLandTime = 3, #1
+    KLift = 1.5, #3
+    KTurnDamping = 1.7, #1.2
+    BankFactor = 1.5, #2.5
+    PredictAheadForBombDrop = 3, #(CBF)
+  },
+  Categories = {
+    'PRODUCTFA',
+    'SELECTABLE',
+    'BUILTBYTIER3COMMANDER',
+    'BUILTBYTIER3ENGINEER',
+    'SERAPHIM',
+    'MOBILE',
+    'AIR',
+    'HIGHALTAIR',
+    'EXPERIMENTAL',
+    'NEEDMOBILEBUILD',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    'ANTIAIR',
+    'SHOWATTACKRETICLE',
+    'OVERLAYANTIAIR',
+    'OVERLAYRADAR', #Ianz
+    #'DRAGBUILD',
+    'SORTDEFENSE', #Ianz
+  },
+  Economy = {
+    BuildCostEnergy = 1560000, #780000
+    BuildCostMass = 96000, #48000
+    BuildTime = 108000, #36000
+  },
+  Intel = {
+    RadarRadius = 120, #nil
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Guard = false, #true
+      RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 2, #Null
+  },
+  Veteran = {
+    Level1 = 100, #50
+    Level2 = 200,
+    Level3 = 300,
+    Level4 = 400,
+    Level5 = 500,
+  },
+  Weapon = {
+    { #Ohwalli Strategic Bomb
+      FiringTolerance = 6, #(CBF)
+    },
+    { #Losaare AA Autocannon (Right Front)
+      Damage = 225, #450
+    },
+    { #Losaare AA Autocannon (Left Front)
+      Damage = 225, #450
+    },
+    { #Losaare AA Autocannon (Right Back)
+      Damage = 225, #450
+    },
+    { #Losaare AA Autocannon (Left Back)
+      Damage = 225, #450
+    },
+    { #Crash
+    },
+  },
+  Wreckage = {
+    ReclaimTimeMultiplier = 4, #1
+  },
+}
+
+-- Yolona Oss -------------------------------------------------------------------------------------------------------
+#I think this one is a little too hard to get, but it fill the same role as the paragon by guarenteeing an end to the
+# game after 3 hours. I might actually decrease the cost (and power) of this one so the seraphim have three available
+# experimentals in the regular game
+UnitBlueprint {
+  Merge = true,
+  BlueprintId = "xsb2401", #Yolona Oss Experimental Missile Launcher
+  Categories = {
+    'PRODUCTFA',
+    'SELECTABLE',
+    'BUILTBYTIER3ENGINEER',
+    'BUILTBYTIER3COMMANDER',
+    'SERAPHIM',
+    'STRUCTURE',
+    'STRATEGIC',
+    'EXPERIMENTAL',
+    'NUKE',
+    'SILO',
+    #'DRAGBUILD',
+    'SIZE12',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    'SORTSTRATEGIC',
+  },
+  Veteran = {
+    Level1 = 100, #50
+    Level2 = 200,
+    Level3 = 300,
+    Level4 = 400,
+    Level5 = 500,
+  },
+  Wreckage = {
+    ReclaimTimeMultiplier = 4, #1
+  },
+}

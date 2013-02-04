@@ -1,0 +1,161 @@
+-- UEF --------------------------------------------------------------------------------------------------
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/TIFMissileNuke01/TIFMissileNuke01_proj.bp", # static SML
+    DoNotCollideList = { # added by brute51 - bug fix for nuke blocked by defsat [135]
+      'SATELLITE',
+    },
+}
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/TIFMissileNuke02/TIFMissileNuke02_proj.bp", # mobile SML
+    DoNotCollideList = { # added by brute51 - bug fix for nuke blocked by defsat [135]
+      'SATELLITE',
+    },
+    Economy = {
+      BuildCostEnergy = 1350000, #1764000
+      BuildCostMass = 12000, #16800
+      BuildTime = 324000, #453600
+    },
+}
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/TIFMissileNukeCDR/TIFMissileNukeCDR_proj.bp", # UEF Billy
+#    Economy = {
+#      BuildCostEnergy = ,
+#      BuildCostMass = ,
+#      BuildCostTime = ,
+#    },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/TIMMissileIntercerptor01/TIMMissileIntercerptor01_proj.bp", #Anti-Nuke
+  Economy = {
+    BuildCostEnergy = 72000, #360000
+    BuildCostMass = 720, #3600
+    BuildTime = 129600, #259200
+  },
+}
+
+-- AEON --------------------------------------------------------------------------------------------------
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/AIFQuantumWarhead01/AIFQuantumWarhead01_proj.bp", # static SML
+    DoNotCollideList = { # added by brute51 - bug fix for nuke blocked by defsat [135]
+      'SATELLITE',
+    },
+}
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/AIFQuantumWarhead03/AIFQuantumWarhead03_proj.bp", # mobile SML
+    DoNotCollideList = { # added by brute51 - bug fix for nuke blocked by defsat [135]
+      'SATELLITE',
+    },
+    Economy = {
+      BuildCostEnergy = 1350000, #1764000
+      BuildCostMass = 12000, #16800
+      BuildTime = 324000, #453600
+    },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/AIMSaintAntiNuke01/AIMSaintAntiNuke01_proj.bp", #Anti-Nuke
+  Economy = {
+    BuildCostEnergy = 72000, #360000
+    BuildCostMass = 720, #3600
+    BuildTime = 129600, #259200
+  },
+}
+
+-- Cybran --------------------------------------------------------------------------------------------------
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/CIFEMPFluxWarhead01/CIFEMPFluxWarhead01_proj.bp", # static SML
+    DoNotCollideList = { # added by brute51 - bug fix for nuke blocked by defsat [135]
+        'SATELLITE',
+    },
+}
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/CIFEMPFluxWarhead04/CIFEMPFluxWarhead04_proj.bp", # mobile SML
+    DoNotCollideList = { # added by brute51 - bug fix for nuke blocked by defsat [135]
+      'SATELLITE',
+    },
+    Economy = {
+      BuildCostEnergy = 1350000, # 1764000
+      BuildCostMass = 12000, # 16800
+      BuildTime = 324000, # 453600
+    },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/CAADissidentAntiNuke01/CAADissidentAntiNuke01_proj.bp", #Anti-Nuke
+  Economy = {
+    BuildCostEnergy = 72000, #360000
+    BuildCostMass = 720, #3600
+    BuildTime = 129600, #259200
+  },
+}
+
+-- Seraphim --------------------------------------------------------------------------------------------------
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/SIFInainoStrategicMissile01/SIFInainoStrategicMissile01_proj.bp", # static SML
+    DoNotCollideList = { # added by brute51 - bug fix for nuke blocked by defsat [135]
+        'SATELLITE',
+    },
+}
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/SIFInainoStrategicMissile02/SIFInainoStrategicMissile02_proj.bp", # mobile SML
+    Audio = {
+      ExistLoop = Sound {
+        Bank = 'UELWeapon',
+        Cue = 'UEF_Nuke_Flight',
+        LodCutoff = 'DefaultLodCutoff',
+      },
+      ImpactTerrain = Sound {
+        Bank = 'Impacts',
+        Cue = 'XSB2305_Impact', # fixed typo, lowercase i to uppercase [115]
+        LodCutoff = 'Weapon_LodCutoff',
+      },
+      ImpactWater = Sound {
+        Bank = 'Impacts',
+        Cue = 'XSB2305_Impact', # fixed typo, lowercase i to uppercase [115]
+        LodCutoff = 'Weapon_LodCutoff',
+      },
+      NukeExplosion = Sound {
+        Bank = 'Impacts',
+        Cue = 'XSB2305_Impact', # fixed typo, lowercase i to uppercase [115]
+        LodCutoff = 'Weapon_LodCutoff',
+      },
+    },
+    DoNotCollideList = { # added by brute51 - bug fix for nuke blocked by defsat [135]
+      'SATELLITE',
+    },
+    Economy = {
+      BuildCostEnergy = 1350000, #1920000
+      BuildCostMass = 12000, #19200
+      BuildTime = 324000, #518400
+    },
+}
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/SIFExperimentalStrategicMissile01/SIFExperimentalStrategicMissile01_proj.bp", # static exp SML
+    DoNotCollideList = { # added by brute51 - bug fix for nuke blocked by defsat [135]
+      'SATELLITE',
+    },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/SIFHuAntiNuke01/SIFHuAntiNuke01_proj.bp", #Anti-Nuke
+  Economy = {
+    BuildCostEnergy = 72000, #360000
+    BuildCostMass = 720, #3600
+    BuildTime = 129600, #259200
+  },
+}

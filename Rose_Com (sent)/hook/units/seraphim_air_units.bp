@@ -1,0 +1,245 @@
+-- Seraphim T1 Air Units --------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "xsa0101", #Sele-istle Air Scout
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildCostEnergy = 1200, #1600
+    BuildCostMass = 30, #40
+    BuildTime = 300, #400
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xsa0102", #Ia-atha Interceptor
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Weapon = {
+    {
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xsa0103", #Sinnve Attack Bomber
+  Air = {
+    AutoLandTime = 4, #1
+    PredictAheadForBombDrop = 3, #(CBF)
+    MaxAirspeed = 11, #10
+  },
+  Weapon = {
+    {
+      FiringTolerance = 6, #(CBF)
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xsa0107", #Vish Light Air Transport
+  Air = {
+    KTurn = 1.8, #1
+    KTurnDamping = 2.7, #4
+  },
+  Defense = {
+    AirThreatLevel = 2, #4
+    Health = 750, MaxHealth = 750, #500
+  },
+  Economy = {
+    BuildCostMass = 160, #120
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 3, #2
+  },
+}
+
+-- Seraphim T2 Air Units --------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "xsa0104", #Vishala Air Transport
+  Air = {
+    MaxAirspeed = 11, #15
+  },
+  Defense = {
+    AirThreatLevel = 3, #1.5
+    Health = 2450, MaxHealth = 2450, #1625
+  },
+  Economy = {
+    BuildCostMass = 480, #300
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Attack = false, #true
+      RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 3, #2
+  },
+  Weapon = {
+    { #AA Autogun
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+      MaxRadius = 30, #20
+    },
+    { #AA Autogun
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+      MaxRadius = 30, #20
+    },
+    { #Heavy Phasic Autogun
+      MuzzleVelocity = 40, #13
+      Damage = 8, #2
+    },
+    { #Crash
+      Damage = 250, #25
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xsa0203", #Vulthoo Gunship
+  Air = {
+    AutoLandTime = 6, #1
+  },
+  Display = {
+    UniformScale = 0.05, #0.04
+  },
+  Economy = {
+    BuildCostEnergy = 6400, #6000
+    BuildCostMass = 320, #300
+    BuildTime = 1600, #2000
+  },
+  Weapon = {
+    {
+      AlwaysRecheckTarget = true, #nil
+      TargetPriorities = {
+        'SPECIALHIGHPRI',
+        'MOBILE ANTIAIR', #Ianz
+        'SPECIALLOWPRI',
+        'ALLUNITS',
+      },
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xsa0204", #Uosioz Torpedo Bomber
+  Economy = {
+    BuildTime = 1200, #1600
+  },
+  Weapon = {
+    {
+      FiringTolerance = 6, #(CBF)
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xsa0202", #Notha Multirole
+  Air = {
+    AutoLandTime = 4, #1
+    KRoll = 2, #1
+    PredictAheadForBombDrop = 3, #(CBF)
+  },
+  Categories = {
+        'PRODUCTFA',
+        'SELECTABLE',
+        'BUILTBYTIER2FACTORY',
+        'BUILTBYTIER3FACTORY',
+        'SERAPHIM',
+        'MOBILE',
+        'AIR',
+        'HIGHALTAIR',
+        'TECH2',
+        'BOMBER', #Ianz
+        'ANTIAIR',
+        'VISIBLETORECON',
+        'RECLAIMABLE',
+        'SHOWATTACKRETICLE', #Ianz
+        'OVERLAYANTIAIR',
+        'OVERLAYRADAR',
+  },
+  Economy = {
+    BuildCostEnergy = 12600, #8400
+  },
+  Weapon = {
+    { #AA Gatling Gun
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+      FiringTolerance = 2, #0
+      NeedPrep = false, #true
+      TrackingRadius = 1.25, #nil
+    },
+    { #AA Gatling Gun
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+      FiringTolerance = 2, #0
+      NeedPrep = false, #true
+      TrackingRadius = 1.25, #nil
+    },
+    { #Othe Tac Bomb
+      NeedPrep = false, #true
+      Damage = 880, #1175
+      FiringTolerance = 6, #(CBF)
+    },
+    { #Crash
+      Damage = 200, #25
+    },
+  },
+}
+
+-- Seraphim T3 Air Units --------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "xsa0302", #Iaselen Spy Plane
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildCostEnergy = 5250, #5000
+    BuildCostMass = 180, #195
+    BuildTime = 1200, #900
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xsa0304", #Sinntha Strategic Bomber
+  Air = {
+    AutoLandTime = 4, #1
+    PredictAheadForBombDrop = 3, #(CBF)
+  },
+  Economy = {
+    BuildCostEnergy = 67200, #70000
+  },
+  Weapon = {
+    {
+      FiringTolerance = 6, #(CBF)
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xsa0303", #Iazyne Air Superiority Fighter
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildCostEnergy = 21600, #20000
+    BuildCostMass = 480, #400
+    BuildTime = 3200, #3000
+  },
+  Weapon = {
+    { #Losaare AA Autocannon
+      Damage = 105, #135
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+  },
+}

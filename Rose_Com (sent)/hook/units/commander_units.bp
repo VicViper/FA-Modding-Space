@@ -1,0 +1,790 @@
+-- Aeon Commander ----------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "ual0001", #Aeon Armored Command Unit #ALSO SEE SCRIPT CHANGES
+  Display = {
+    AnimationWalkRate = 2.8, #2.5
+    MovementEffects = {
+      Land = {
+        Footfall = {
+          Bones = {
+            {
+              Tread = {
+                TreadOffset = {  -0.15, 0, -0.5,  }, #Hack
+              },
+            },
+            {
+              Tread = {
+                TreadOffset = {  0.15, 0, -0.5,  }, #Hack
+              },
+            },
+          },
+        },
+      },
+    },
+    UniformScale = 0.02, #0.018
+  },
+  Economy = {
+    StorageMass = 750, #650
+    StorageEnergy = 10000, #5000
+    ProductionPerSecondEnergy = 50, #10
+    ProductionPerSecondMass = 4, #1
+  },
+  Enhancements = {
+    AdvancedEngineering = { #Tech 2 Engineering Suite
+      NewHealth = 4000, #3000
+    },
+    ChronoDampener = { #ChronoDampener
+      NewHealth = 5000, #Null #Custom Var
+    },
+    CrysalisBeam = { #Enhanced Quantum Disruptor
+      NewHealth = 3000, #Null #Custom Var
+    },
+    EnhancedSensors = { #Enhanced Sensor Sysetem
+      NewHealth = 3000, #Null #Custom Var
+    },
+    HeatSink = { #Quantum Accelerator
+      NewHealth = 3000, #Null #Custom Var
+    },
+    ResourceAllocation = {
+      NewHealth = 5000, #Null #Custom Var
+    },
+    ResourceAllocationAdvanced = {
+      NewHealth = 5000, #Null #Custom Var
+    },
+    Shield = { #Personal Shield Generator
+      ShieldMaxHealth = 11000, #29000
+      ShieldRegenRate = 250, #37
+      ShieldRegenStartTime = 18, #1
+    },
+    ShieldHeavy = { #Heavy Personal Shield Generator
+      ShieldMaxHealth = 18000, #44000
+      ShieldRegenRate = 500, #44
+      ShieldRegenStartTime = 18, #1
+    },
+    T3Engineering = { #Tech 3 Engineering Suite
+      NewHealth = 8000, #6000
+      NewRegenRate = 35, #(CBF)
+    },
+    Teleporter = {
+      NewHealth = 5000, #Null #Custom Var
+    },
+  },
+  General = {
+    SelectionPriority = 4, #3
+  },
+  Physics = {
+    MaxAcceleration = 2.8, #1.7
+    MaxSpeed = 1.9, #1.7
+    TurnRadius = 6, #10
+    TurnRate = 180, #90
+  },
+  TeleportHeight = 1.6, #custom
+  Weapon = {
+    { #Quantum Disruptor Cannon
+      TurretYawSpeed = 180, #90
+    },
+    { #Overcharge Cannon
+      TurretYawSpeed = 180, #90
+    },
+    { #Chrono Dampener
+    },
+    { #Death Explosion
+      Damage = 6000,
+      DamageRadius = 12,
+      ProjectileId = '/effects/Entities/SCUDeath01/SCUDeath01_proj.bp',
+    },
+  },
+  Wreckage = {
+    Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+    EnergyMult = 0,
+    HealthMult = 0.9,
+    MassMult = 0.9,
+    ReclaimTimeMultiplier = 6,
+    WreckageLayers = {
+      Air = false,
+      Land = true,
+      Seabed = true,
+      Sub = false,
+      Water = false,
+    },
+  },
+}
+
+-- Cybran Commander-----------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "url0001", #Cybran Armored Command Unit #ALSO SEE SCRIPT CHANGES
+  Display = {
+    AnimationWalkRate = 1.95, #1.7
+    MovementEffects = {
+      Land = {
+        Footfall = {
+          Bones = {
+            {
+              FootBone = 'Left_Footprint',
+              HipBone = 'Right_Leg_B01',
+              KneeBone = 'Right_Leg_B02',
+              Tread = {
+                TreadOffset = {  -0.15, 0, -0.5,  }, #{0.15, 0, 0.45} #Hack
+              },
+            },
+            {
+              FootBone = 'Right_Footprint',
+              HipBone = 'Left_Leg_B01',
+              KneeBone ='Left_Leg_B02',
+              Tread = {
+                TreadOffset = {  0.15, 0, -0.5,  }, #Hack
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  Economy = {
+    StorageMass = 750, #650
+    StorageEnergy = 10000, #5000
+    ProductionPerSecondEnergy = 50, #10
+    ProductionPerSecondMass = 4, #1
+  },
+  Enhancements = {
+    AdvancedEngineering = { #Tech 2 Engineering Suite
+      NewHealth = 4500, #Null #Custom Var
+    },
+    CloakingGenerator = {
+      NewHealth = 15000, #Null #Custom Var
+    },
+    CoolingUpgrade = { #Microwave Accelerator
+      NewHealth = 2500, #Null #Custom Var
+    },
+    MicrowaveLaserGenerator = {
+    },
+    NaniteTorpedoTube = {
+      NewHealth = 3000, #Null #Custom Var
+    },
+    ResourceAllocation = {
+      NewHealth = 6500, #Null #Custom Var
+    },
+    SlealthGenerator = {
+      NewHealth = 1000, #Null #Custom Var
+    },
+    T3Engineering = { #Tech 3 Engineering Suite
+      NewHealth = 9000, #7000
+      NewRegenRate = 35, #(CBF)
+    },
+    Teleporter = {
+      NewHealth = 5000, #Null #Custom Var
+    },
+  },
+  General = {
+    SelectionPriority = 4, #3
+  },
+  Physics = {
+    MaxAcceleration = 2.8, #1.7
+    MaxSpeed = 1.9, #1.7
+    TurnRadius = 6, #10
+    TurnRate = 180, #90
+  },
+  TeleportHeight = 1.7, #custom
+  Weapon = {
+    { #Molecular Ripper Arm Cannon
+      TurretYawSpeed = 180, #90
+    },
+    { #Overcharge Cannon
+      TurretYawSpeed = 180, #90
+    },
+    { #Death Nuke
+      Damage =6000,
+      DamageRadius = 12,
+      ProjectileId = '/effects/Entities/SCUDeath01/SCUDeath01_proj.bp',
+    },
+    { #Microwave Laser Generator
+    },
+    { #Nanite Torpedo Launcher
+      MuzzleSalvoSize = 3, #4
+      #RackBones = { #///WORK IN PROGRESS///CHANGE TORP LAUNCHER TO RIGHT ARM///CHECK AND FIX RANGE///
+      #  {
+      #    MuzzleBones = {
+      #      'Turret_Muzzle_02', #'Turret_Muzzle_03',
+      #    },
+      #    RackBone = 'Turret_Muzzle_02', #'Turret_Muzzle_03',
+      #  },
+      #},
+    },
+  },
+  Wreckage = {
+    Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+    EnergyMult = 0,
+    HealthMult = 0.9,
+    MassMult = 0.9,
+    ReclaimTimeMultiplier = 6,
+    WreckageLayers = {
+      Air = false,
+      Land = true,
+      Seabed = true,
+      Sub = false,
+      Water = false,
+    },
+  },
+}
+
+-- Seraphim Commander ----------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "xsl0001", #Seraphim Armored Command Unit #ALSO SEE SCRIPT CHANGES
+  AI = {
+    GuardRadius = 10,
+    TargetBones = { #(CBF)
+      'Back_Upgrade',
+      'Torso',
+      'Left_Leg_B01',
+      'Right_Leg_B01',
+    },
+  },
+  Audio = {
+    StartCapture = Sound {
+      Bank = 'XSL',
+      Cue = 'XSL0105_Capture_Start', #(CBF)
+      LodCutoff = 'UnitMove_LodCutoff',
+    },
+  },
+  BuffFields = {
+    RegenField = 'SeraphimACURegenBuffField',
+    AdvancedRegenField = 'SeraphimAdvancedACURegenBuffField',
+  },
+  Display = {
+    AnimationWalkRate = 1.3, #1.1
+    MovementEffects = {
+      Land = {
+        Footfall = {
+          Bones = {
+            {
+              Tread = {
+                TreadOffset = {  0.25, 0, 0.5,  }, #{0.15, 0, 0.45,}
+              },
+            },
+            {
+              Tread = {
+                TreadOffset = {  -0.25, 0, 0.5,  } #{-0.15, 0, 0.45,}
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  Economy = {
+    StorageMass = 750, #650
+    StorageEnergy = 10000, #5000
+    ProductionPerSecondEnergy = 50, #10
+    ProductionPerSecondMass = 4, #1
+  },
+  Enhancements = {
+    AdvancedEngineering = { #Tech 2 Engineering Suite
+      NewHealth = 3000, #3000
+    },
+    AdvancedRegenAura = { #Rapid Restoration Field
+      MaxHealthFactor = 1.1, #1.1
+      RegenCeiling = 75, #200
+      RegenFloor = 5, #0
+      Slot = 'LCH', #'RCH'
+      UpgradeEffectBones = {
+        'Left_Upgrade', #'Right_Upgrade'
+        'Left_Turret_Muzzle', #'Right_Turret_Muzzle'
+      },
+    },
+    AdvancedRegenAuraRemove = {
+      Slot = 'LCH', #'RCH'
+    },
+    BlastAttack = { #Chronotron Amplifier
+      NewHealth = 2000, #Null #Custom Var
+      ShowBones = {
+        'Right_Upgrade', #'Left_Upgrade'
+      },
+      Slot = 'RCH', #'LCH'
+      UpgradeEffectBones = {
+        'Right_Upgrade', #'Left_Upgrade'
+        'Right_Upgrade_Muzzle', #'Left_Upgrade_Muzzle'
+      },
+    },
+    BlastAttackRemove = {
+      HideBones = {
+        'Right_Upgrade', #'Left_Upgrade'
+      },
+      Slot = 'RCH', #'LCH'
+    },
+    DamageStabilization = { #Nano-Repair System
+      NewHealth = 6000, #6000
+    },
+    DamageStabilizationAdvanced = { #Enhanced Nano-Repair System
+      NewHealth = 14000, #20000
+    },
+    Missile = { #Tactical Missile Launcher
+      NewHealth = 2000, #Null #Custom Var
+    },
+    RateOfFire = { #Chronotron Accelerator
+      NewHealth = 3000, #Null #Custom Var
+    },
+    RegenAura = { #Restoration Field
+      BuildCostEnergy = 12000, #4500
+      RegenCeiling = 50, #75
+      RegenFloor = 3, #0
+      ShowBones = {
+        'Left_Upgrade',
+      },
+      Slot = 'LCH', #'RCH'
+      UpgradeEffectBones = {
+        'Left_Upgrade', #'Right_Upgrade'
+        'Left_Turret_Muzzle', #'Right_Turret_Muzzle'
+      },
+    },
+    RegenAuraRemove = {
+      HideBones = {
+        'Left_Upgrade', #'Right_Upgrade'
+      },
+      Slot = 'LCH', #'RCH'
+    },
+    ResourceAllocation = {
+      NewHealth = 5000, #Null #Custom Var
+    },
+    ResourceAllocationAdvanced = {
+      NewHealth = 5000, #Null #Custom Var
+    },
+    T3Engineering = { #Tech 3 Engineering Suite
+      NewHealth = 5000, #4000
+      NewRegenRate = 35, #(CBF)
+    },
+    Teleporter = {
+      NewHealth = 5000, #Null #Custom Var
+    },
+  },
+  General = {
+    SelectionPriority = 4, #3
+  },
+  Physics = {
+    MaxAcceleration = 2.8, #1.7
+    MaxSpeed = 1.9, #1.7
+    TurnRadius = 6, #10
+    TurnRate = 180, #90
+  },
+  TeleportHeight = 2, #custom
+  Weapon = {
+    { #Cronotron Disruptor Cannon
+      TurretYawSpeed = 180, #90
+    },
+    { #Overcharge Cannon
+      TurretYawSpeed = 180, #90
+    },
+    { #Death Explosion
+      Damage = 6000,
+      DamageRadius = 12,
+      ProjectileId = '/effects/Entities/SCUDeath01/SCUDeath01_proj.bp',
+    },
+    { #Tactical Missile Launcher
+      MinRadius = 16, #5
+    },
+  },
+  Wreckage = {
+    Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+    EnergyMult = 0,
+    HealthMult = 0.9,
+    MassMult = 0.9,
+    ReclaimTimeMultiplier = 6,
+    WreckageLayers = {
+      Air = false,
+      Land = true,
+      Seabed = true,
+      Sub = false,
+      Water = false,
+    },
+  },
+}
+
+-- UEF Commander ----------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "uel0001", #UEF Armored Command Unit #ALSO SEE SCRIPT CHANGES
+  Display = {
+    AnimationWalkRate = 1.95, #1.7        
+    MovementEffects = {
+      Land = {
+        Footfall = {
+          Bones = {
+            {
+              FootBone = 'Left_Footfall01',
+              Tread = {
+                TreadOffset = {  0.32, 0, -0.55,  }, #Hack
+              },
+            },
+            {
+              FootBone = 'Left_Footfall', # Yes, the UEF Commander has two left feet
+              Tread = {
+                TreadOffset = {  -0.32, 0, -0.55,  }, #Hack
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+  Economy = {
+    StorageMass = 750, #650
+    StorageEnergy = 10000, #5000
+    ProductionPerSecondEnergy = 50, #10
+    ProductionPerSecondMass = 4, #1
+  },
+  Enhancements = {
+    AdvancedEngineering = { #Tech 2 Engineering Suite
+      NewHealth = 4000, #3000
+    },
+    DamageStablization = { #Nano-Repair System
+      NewHealth = 5000, #Null #Custom Var
+    },
+    HeavyAntiMatterCannon = { #Zephyr Amplifier
+      NewHealth = 2000, #Null #Custom Var
+    },
+    LeftPod = {
+    },
+    ResourceAllocation = {
+      NewHealth = 5000, #Null #Custom Var
+    },
+    RightPod = {
+    },
+    Shield = { #Personal Shield Generator
+      ShieldMaxHealth = 10000, #24000
+      ShieldRegenRate = 250, #35
+      ShieldRegenStartTime = 18, #1
+    },
+    ShieldGeneratorField = { #Shield Generator Field
+      ShieldMaxHealth = 15000, #36000
+      ShieldRegenRate = 500, #42
+      ShieldRegenStartTime = 18, #1
+      ShieldVerticalOffset = -1, #-3
+    },
+    T3Engineering = { #Tech 3 Engineering Suite
+      NewHealth = 8000, #6000
+      NewRegenRate = 35, #(CBF)
+    },
+    TacticalMissile = {
+      NewHealth = 2000, #Null #Custom Var
+    },
+    TacticalNukeMissile = { # The Billy
+      NewHealth = 3000, #nil #Custom Var
+    },
+    Teleporter = {
+      NewHealth = 5000, #nil #Custom Var
+    },
+  },
+  General = {
+    SelectionPriority = 4, #3
+  },
+  Physics = {
+    MaxAcceleration = 2.8, #1.7
+    MaxSpeed = 1.9, #1.7
+    TurnRadius = 6, #10
+    TurnRate = 180, #90
+  },
+  TeleportHeight = 1.4, #custom
+  Weapon = {
+    { #Zephyr Anti-Matter Cannon
+      TurretYawSpeed = 180, #90
+    },
+    { #Overcharge Cannon
+      TurretYawSpeed = 180, #90
+    },
+    { #Tactical Missile
+      MuzzleVelocity = 5, #10
+      MinRadius = 16, #5
+    },
+    { #The Billy
+      MuzzleVelocity = 5, #10
+      MinRadius = 16, #5
+      NukeInnerRingDamage = 24000,
+      NukeInnerRingRadius = 25,
+      NukeOuterRingRadius = 35,
+    },
+    { #Death Explosion
+      Damage = 6000,
+      DamageRadius = 12,
+      ProjectileId = '/effects/Entities/SCUDeath01/SCUDeath01_proj.bp',
+    },
+  },
+  Wreckage = {
+    Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+    EnergyMult = 0,
+    HealthMult = 0.9,
+    MassMult = 0.9,
+    ReclaimTimeMultiplier = 6,
+    WreckageLayers = {
+      Air = false,
+      Land = true,
+      Seabed = true,
+      Sub = false,
+      Water = false,
+    },
+  },
+}
+
+-- Aeon Support Commander ----------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "ual0301", #Aeon Support Armored Command Unit
+  Defense = {
+    ArmorType = 'Commander', #Overcharge Immune
+    Health = 20000, #30000
+    MaxHealth = 20000,
+  },
+  Display = {
+    AnimationWalkRate = 3.6, #3.5
+  },
+  Economy = {
+    BuildCostEnergy = 126000, #123000
+    BuildCostMass = 5850, #8700
+  },
+  Enhancements = {
+    Shield = {
+      ShieldMaxHealth = 8000, #20000
+      ShieldRegenRate = 300, #40
+      ShieldRegenStartTime = 18, #1
+    },
+    ShieldHeavy = {
+      ShieldMaxHealth = 14000, #35000
+      ShieldRegenRate = 600, #120
+      ShieldRegenStartTime = 18, #1
+    },
+  },
+  General = {
+    SelectionPriority = 4, #3
+  },
+  Physics = {
+    MaxAcceleration = 3.3, #2.2
+    TurnRadius = 6, #10
+    TurnRate = 180, #150
+  },
+  TeleportHeight = 1.3, #custom
+  Weapon = {
+    { #Reacton Cannon
+    },
+    { # Death Explosion
+      Damage = 3000, #1000
+    },
+  },
+  Wreckage = {
+    Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+    EnergyMult = 0,
+    HealthMult = 0.9,
+    MassMult = 0.9,
+    ReclaimTimeMultiplier = 6,
+    WreckageLayers = {
+      Air = false,
+      Land = true,
+      Seabed = true,
+      Sub = false,
+      Water = false,
+    },
+  },
+}
+
+-- Cybran Support Commander ----------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "url0301", #Cybran Support Armored Command Unit
+  Defense = {
+    ArmorType = 'Commander', #Overcharge Immune
+    Health = 25000, #38000
+    MaxHealth = 25000,
+  },
+  Display = {
+    AnimationWalkRate = 3.3, #3.2
+  },
+  Economy = {
+    BuildCostEnergy = 121500, #120000
+    BuildCostMass = 6075, #9000
+  },
+  Enhancements = {
+    FocusConverter = {
+      NewDamageMod = 400, #250
+    },
+    StealthGenerator = {
+      BuildCostEnergy = 75000, #112500
+      BuildCostMass = 2000, #3000
+    },
+  },
+  General = {
+    SelectionPriority = 4, #3
+  },
+  Physics = {
+    MaxAcceleration = 3.3, #2.2
+    TurnRadius = 6, #10
+    TurnRate = 180, #150
+  },
+  TeleportHeight = 2, #custom
+  Weapon = {
+    { #Disintegrator Pulse Laser
+      Damage = 200, #100
+    },
+    { #Nanite Missile System
+    },
+    { #Death Explosion
+      Damage = 3000, #1000
+    },
+  },
+  Wreckage = {
+    Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+    EnergyMult = 0,
+    HealthMult = 0.9,
+    MassMult = 0.9,
+    ReclaimTimeMultiplier = 6,
+    WreckageLayers = {
+      Air = false,
+      Land = true,
+      Seabed = true,
+      Sub = false,
+      Water = false,
+    },
+  },
+}
+
+-- Seraphim Support Commander ----------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "xsl0301", #Seraphim Support Armored Command Unit
+  Categories = { #-RECLAIMABLE
+    'PRODUCTFA', 
+    'SELECTABLE', 
+    'SERAPHIM', 
+    'MOBILE', 
+    'LAND', 
+    'TECH3', 
+    'ENGINEER', 
+    'CONSTRUCTION', 
+    'REPAIR', 
+    'SILO', 
+    'RECLAIM', 
+    'REBUILDER', 
+    'BUILTBYQUANTUMGATE', 
+    'CAPTURE', 
+    'VISIBLETORECON', 
+    'SUBCOMMANDER', 
+    'PATROLHELPER', 
+    'SHOWQUEUE', 
+    'OVERLAYOMNI', 
+    'OVERLAYDIRECTFIRE',
+  },
+  Defense = {
+    ArmorType = 'Commander', #Overcharge Immune
+    Health = 21000, #31000
+    MaxHealth = 21000,
+  },
+  Display = {
+    AnimationWalkRate = 1.05, #1
+  },
+  Economy = {
+    BuildCostEnergy = 117000, #117000
+    BuildCostMass = 6075, #9300
+    ProductionPerSecondEnergy = 400,
+    ProductionPerSecondMass = 4,
+  },
+  Enhancements = {
+    DamageStabilization = {
+      NewHealth = 14000, #Corrected
+    },
+    Shield = {
+      ShieldMaxHealth = 12000, #25000
+      ShieldRegenRate = 300, #22
+      ShieldRegenStartTime = 18, #1
+    },
+  },
+  General = {
+    SelectionPriority = 4, #3
+  },
+  Physics = {
+    MaxAcceleration = 3.3, #2.2
+    TurnRadius = 6, #10
+    TurnRate = 240, #150
+  },
+  TeleportHeight = 1.5, #custom
+  Weapon = {
+    { #Light Cronotron Cannon
+      Damage = 200, #100
+    },
+    { #Light Cronotron Overcharge Cannon
+      TurretYawSpeed = 180, #90
+    },
+    { #Death Explosion
+      Damage = 3000, #1000
+    },
+    { #Laanse Tactical Missile Launcher
+      ProjectileId = '/projectiles/SIFLaanseTacticalMissileCDR/SIFLaanseTacticalMissileCDR_proj.bp',
+      MinRadius = 16, #5
+    },
+  },
+  Wreckage = {
+    Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+    EnergyMult = 0,
+    HealthMult = 0.9,
+    MassMult = 0.9,
+    ReclaimTimeMultiplier = 6,
+    WreckageLayers = {
+      Air = false,
+      Land = true,
+      Seabed = true,
+      Sub = false,
+      Water = false,
+    },
+  },
+}
+
+-- UEF Support Commander ----------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "uel0301", #UEF Support Armored Command Unit
+  Defense = {
+    ArmorType = 'Commander', #Overcharge Immune
+    Health = 21000, #32000
+    MaxHealth = 21000,
+  },
+  Display = {
+    AnimationWalkRate = 3.3, #3.2
+  },
+  Economy = {
+    BuildCostEnergy = 112500, #114000
+    BuildCostMass = 6300, #9600
+  },
+  Enhancements = {
+    Shield = {
+      ShieldMaxHealth = 15000, #32000
+      ShieldRegenRate = 500, #50
+      ShieldRegenStartTime = 18, #1
+    },
+    ShieldGeneratorField = {
+      ShieldMaxHealth = 25000, #52000
+      ShieldRegenRate = 500, #150
+      ShieldRegenStartTime = 18, #1
+    },
+  },
+  General = {
+    SelectionPriority = 4, #3
+  },
+  Physics = {
+    MaxAcceleration = 3.3, #2.2
+    TurnRadius = 6, #10
+    TurnRate = 240, #150
+  },
+  TeleportHeight = 2, #custom
+  Weapon = {
+    { #Heavy Plasma Cannon
+      Damage = 200, #100
+    },
+    { #Death Explosion
+      Damage = 3000, #1000
+    },
+  },
+  Wreckage = {
+    Blueprint = '/props/DefaultWreckage/DefaultWreckage_prop.bp',
+    EnergyMult = 0,
+    HealthMult = 0.9,
+    MassMult = 0.9,
+    ReclaimTimeMultiplier = 6,
+    WreckageLayers = {
+      Air = false,
+      Land = true,
+      Seabed = true,
+      Sub = false,
+      Water = false,
+    },
+  },
+}

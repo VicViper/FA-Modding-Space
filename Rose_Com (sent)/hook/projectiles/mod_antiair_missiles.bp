@@ -1,0 +1,9 @@
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/CAAMissileNanite02/CAAMissileNanite02_proj.bp", #Corsair AA Missiles
+  Physics = {
+    Acceleration = 10, #5
+    InitialSpeed = 55, #30
+    MaxSpeed = 90, #30
+  },
+}

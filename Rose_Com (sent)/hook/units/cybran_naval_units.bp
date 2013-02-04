@@ -1,0 +1,178 @@
+-- Cybran T1 Naval Units --------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "urs0203", #Silver Attack Submarine #ALSO SEE SCRIPT CHANGES
+  Physics = {
+    MaxAcceleration = 4, #6
+    MaxBrake = 4, #6
+    MaxSpeed = 4, #6
+    MaxSpeedReverse = 4, #6
+  },
+  Weapon = {
+    { #Torpedoes
+      MuzzleSalvoDelay = 0.4, #0.8
+    },
+    { #Surface Gun
+      MaxRadius = 28, #32
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "urs0103", #Trident Class Frigate
+  Physics = {
+    MaxAcceleration = 5.5, #6
+    MaxBrake = 5.5, #6
+    MaxSpeed = 5.5, #6
+    MaxSpeedReverse = 5.5, #6
+  },
+  Weapon = {
+    { #Proton Cannon
+      Damage = 60, #40
+      RateOfFire = 1, #1.53
+    },
+    { #AA Autocannon
+      Damage = 8, #2
+    },
+  },
+}
+
+-- Cybran T2 Naval Units --------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "urs0201", #Salem Class Destroyer
+  Weapon = {
+    { #Proton Cannon
+    },
+    { #AA Autocannon
+      Damage = 5, #2
+    },
+    { #Torpedoes
+      MuzzleSalvoDelay = 0, #0.8
+    },
+    { #AntiTorpedo
+      MinRadius = 8, #15
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "urs0202", #Siren Class Cruiser
+  Weapon = {
+    { #Proton Cannon
+      ProjectileLifetime = 2.6, #nil (CBF)
+    },
+    { #AA Nanodart Launcher
+      Damage = 90, #92 #75
+      RateOfFire = 0.5, #0.8
+    },
+    { #Zapper TMD
+    },
+    { #Direct Fire Nanodart Launcher
+      Damage = 60, #60
+      ProjectileLifetime = 4, #nil
+      MuzzleSalvoDelay = 0, #0.3
+      RateOfFire = 0.5, #0.5
+      UseFiringSolutionInsteadOfAimBone = true, #nil
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xrs0204", #Barracuda Submarine Killer
+  Defense = {
+    Health = 1450, MaxHealth = 1450, #1430
+  },
+  Economy = {
+    BuildCostEnergy = 13200, #8800
+    BuildCostMass = 1650, #1100
+    BuildTime = 6600, #4400
+    MaintenanceConsumptionPerSecondEnergy = 50,
+  },
+  Physics = {
+    MaxAcceleration = 6, #6.5
+    MaxBrake = 6, #6.5
+    MaxSpeed = 6, #6.5
+    MaxSpeedReverse = 6, #6.5
+  },
+  Weapon = {
+    { #Torpedoes
+      Damage = 20, #15
+      RateOfFire = 0.20, #0.25
+    },
+    { #AntiTorpedo
+      MinRadius = 8, #0
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xrs0205", #CI:18 Mermaid Counter Intelligence Boat
+  Physics = {
+    MaxAcceleration = 5.5, #7
+    MaxBrake = 5.5, #7
+    MaxSpeed = 5.5, #7
+    MaxSpeedReverse = 5.5, #7
+  },
+  Weapon = {
+    {
+      MinRadius = 8, #15
+    },
+  },
+}
+
+-- Cybran T3 Naval Units --------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = 'urs0303', #Command Class Aircraft Carrier #ALSO SEE SCRIPT CHANGES
+  Economy = {
+    BuildRate = 160, #150
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "urs0302", #Galaxy Class Battleship
+  AI = {
+    AttackAngle = 90, #60
+  },
+  Defense = {
+    AirThreatLevel = 12, #16
+  },
+  Economy = {
+    BuildCostEnergy = 90000, #75000
+  },
+  Physics = {
+    MaxAcceleration = 3.5, #3
+    MaxBrake = 3.5, #3
+    MaxSpeed = 3.5, #3
+    MaxSpeedReverse = 3.5, #3
+  },
+  Weapon = {
+    { #Proton Cannon
+    },
+    { #Proton Cannon
+    },
+    { #Electron Autocannon
+      Damage = 9, #3
+    },
+    { #Electron Autocannon
+      Damage = 9, #3
+    },
+    { #Torpedoes
+      Damage = 20, #10
+      MuzzleSalvoDelay = 0, #0.8
+    },
+    { #Zapper Anti-Missile
+    },
+    { #Zapper Anti-Missile
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "urs0304", #Plan B Strategic Missile Submarine
+  Economy = {
+    BuildCostMass = 9900, #11000
+  },
+  Weapon = {
+    { #Loa Tactical Missile
+      MaxRadius = 192, #128
+    },
+    { #Nanite Torpedo
+    },
+    { #EMP Flux Warhead
+      RangeCategory = '', #'UWRC_IndirectFire'
+    },
+  },
+}

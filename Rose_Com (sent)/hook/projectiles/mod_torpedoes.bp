@@ -1,0 +1,7 @@
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/AANTorpedoClusterSplit01/AANTorpedoClusterSplit01_proj.bp", #T3 torp bomber torpedoes
+  Physics = {
+      Lifetime = 28, #brute51
+  },
+}

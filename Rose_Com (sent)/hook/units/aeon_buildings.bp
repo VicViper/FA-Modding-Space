@@ -1,0 +1,313 @@
+-- Aeon Economic Structures -----------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "uab1202", #T2 Mass Extractor
+  Economy = {
+    BuildRate = 20, #15
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "uab1302", #T3 Mass Extractor
+  Economy = {
+    BuildCostEnergy = 36000, #31625
+    BuildCostMass = 5600, #4600
+    BuildTime = 4000, #2875
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uab1104", #T2 Mass Fabricator
+  Economy = {
+    BuildCostEnergy = 4000, #4000
+    BuildCostMass = 400, #1000
+    BuildTime = 1000, #500
+    MaintenanceConsumptionPerSecondEnergy = 140, #150
+    ProductionPerSecondMass = 2, #1
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "uab1303", #T3 Mass Fabricator
+  Economy = {
+    ProductionPerSecondMass = 16, #12
+  },
+}
+
+-- Aeon Defensive Structures ----------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "uab2101", #Erupter T1 Point Defense
+  Defense = {
+    Health = 1200, MaxHealth = 1200, #1300
+  },
+  Weapon = {
+    {
+      Damage = 150, #50
+      RateOfFire = 1, #3
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uab2109", #Tide T1 Torpedo Launcher
+  Economy = {
+    BuildCostEnergy = 3200, #3600
+    BuildCostMass = 400, #450
+    BuildTime = 400, #450
+  },
+  Weapon = {
+    {
+      MaxRadius = 40, #50
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uab2108", #Serpentine TML
+  Weapon = {
+    {
+      Damage = 4000, #6000
+      DamageRadius = 3, #2
+      MuzzleVelocity = 5, #10
+      WeaponUnpackAnimationRate = 1.5, #1
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uab4201", #Volcano TMD
+  CollisionOffsetY = -0.25, #(CBF)
+  Economy = {
+    BuildCostEnergy = 4800, #3200
+    BulidCostMass = 420, #280
+    BuildCostTime = 600, #400
+  },
+  Weapon = {
+    {
+      EffectiveRadius = 25, #10
+      Flare = {
+        Radius = 18, #15
+      },
+      MaxRadius = 25, #30?
+      MuzzleVelocity = 10, #5
+      ProjectileLifetime = 2, #4
+      RateOfFire = 0.45, #0.32
+      TargetCheckInterval = 0.2, #0.5
+      TrackingRadius = 1.4, #1.2
+      WeaponRepackTimeout = 0, #1
+      WeaponUnpackAnimationRate = 100, #10
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uab2301", #Oblivion Point Defense
+  Weapon = {
+    {
+      MuzzleChargeDelay = 2.2, #1
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uab2204", #Marr Anti-Air Flak Artillery
+  Defense = {
+    Health = 2000, #3500
+    MaxHealth = 2000,
+  },
+  Economy = {
+    BuildCostEnergy = 4120, #5600
+    BuildCostMass = 412, #560
+    BuildTime = 520, #560
+  },
+  Weapon = {
+    {
+      MaxRadius = 52, #44
+      MuzzleVelocity = 30, #20
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uab2303", #Miasma Artillery Installation
+  Weapon = {
+    {
+      BallisticArc = 'RULEUBA_HighArc', #'RULEUBA_HighArc'
+      Damage = 285, #575
+      DamageRadius = 3.5, #3
+      DoTPulses = 10, #5
+      DoTTime = 4, #1
+      MinRadius = 25, #5
+      MuzzleVelocityReduceDistance = 120, #nil
+      RackRecoilDistance = -0.7, #-2
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uab2304", #Transcender Anti-Air SAM Launcher
+  Defense = {
+    Health = 4800, MaxHealth = 4800, #10500
+  },
+  Economy = {
+    BuildCostEnergy = 14000, #12000
+  },
+  Weapon = {
+    {
+      MaxRadius = 75, #60
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uab4202", #Shield Of Light Shield Generator
+  Defense =  {
+    Health = 600, MaxHealth = 600, #150
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uab4301", #Radiance Shield Generator
+  Defense = {
+    Health = 1200, MaxHealth = 1200, #300
+    Shield = {
+      ShieldRechargeTime = 30, #24
+      ShieldRegenRate = 450, #150
+      ShieldRegenStartTime = 7, #1
+      ShieldMaxHealth = 42000, #18000 #52000
+      ShieldVerticalOffset = -3, #-5
+    },
+  },
+  Economy = {
+    MaintenanceConsumptionPerSecondEnergy = 1500, #300
+  },
+}
+
+-- Aeon Intelligence Structures -------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "uas0305", #T3 Sonar Platform
+  StrategicIconName = 'icon_ship3_intel', #'icon_structure3_intel'
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uab3101", #T1 Radar System
+  Defense = {
+    Health = 50, MaxHealth = 50, #10
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "uab3201", #T2 Radar System
+  Defense = {
+    Health = 150, MaxHealth = 150, #50
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "uab3104", #Oculus Omni Sensor Array
+  Defense = {
+    Health = 250, MaxHealth = 250, #100
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "uab4203", #Veil Stealth Field Generator #ALSO SEE SCRIPT CHANGES
+  Categories = {
+    'PRODUCTSC1', 'SELECTABLE', 'BUILTBYTIER2ENGINEER',
+    'BUILTBYTIER3ENGINEER', 'BUILTBYTIER2COMMANDER',
+    'BUILTBYTIER3COMMANDER', 'AEON', 'STRUCTURE',
+    'INTELLIGENCE', 'TECH2', 'COUNTERINTELLIGENCE',
+    'SIZE4', 'VISIBLETORECON', 'RECLAIMABLE',
+    'OVERLAYCOUNTERINTEL', 'SORTINTEL',
+  },
+  Display = {
+    Tarmacs = {
+      {
+        Albedo = 'Tarmacs/Tar6x_aeon_01_albedo',
+        Normal = 'Tarmacs/Tar6x_aeon_01_normals',
+        Length = 6.4,
+        Width = 6.4,
+      },
+    },
+    UniformScale = 0.8, #1.7
+  },
+  Footprint = {
+    SizeX = 1, #3
+    SizeZ = 1, #3
+  },
+  LifeBarOffset = 0.4, #1.2
+  LifeBarSize = 0.9, #2.5
+  Physics = {
+    MeshExtentsX = 1, #3
+    MeshExtentsZ = 1, #3
+    SkirtOffsetX = -0.5, #-1.5
+    SkirtOffsetZ = -0.5, #-1.5
+    SkirtSizeX = 2, #6
+    SkirtSizeZ = 2, #6
+  },
+  SelectionSizeX = 0.8, #1.7
+  SelectionSizeZ = 0.8, #1.7
+  SizeX = 1, #2
+  SizeY = 1.5, #3
+  SizeZ = 1, #2
+}
+
+-- Aeon Production Buildings ----------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "uab0103", #T1 Naval Factory
+  CollisionOffsetY = -1, #(CBF)
+  Footprint = {
+    MinWaterDepth = 2, #1.5
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "uab0203", #T2 Naval Factory
+  CollisionOffsetY = -1, #(CBF)
+}
+UnitBlueprint { Merge = true, BlueprintId = "uab0303", #T3 Naval Factory
+  CollisionOffsetY = -1, #(CBF)
+  Economy = {
+    BuildRate = 80, #60
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "uab0301", #T3 Land Factory
+  Economy = {
+    BuildRate = 80, #60
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "uab0302", #T3 Air Factory
+  Economy = {
+    BuildRate = 80, #60
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "uab0304", #Portal Quantum Gateway
+  Economy = {
+    BuildRate = 160, #120
+  },
+}
+
+-- Aeon Super Structures --------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "xab2307", #Salvation Rapid Fire Artillery Installation
+  Categories = {
+    'PRODUCTFA', 'SELECTABLE', 'BUILTBYTIER3ENGINEER',
+    'BUILTBYTIER3COMMANDER', 'AEON', 'STRUCTURE',
+    'STRATEGIC', 'TECH3', 'INDIRECTFIRE', 'ARTILLERY',
+    'SIZE20', 'VISIBLETORECON', 'RECLAIMABLE',
+    'OVERLAYINDIRECTFIRE', 'SORTSTRATEGIC',
+  },
+  Economy = {
+    BuildCostEnergy = 2745000, #5400000
+    BuildCostMass = 137250, #270000
+    BuildTime = 45750, #90000
+  },
+  Weapon = {
+    {
+      Damage = 120, #220
+      EnergyDrainPerSecond = 5000, #7500
+      EnergyRequired = 10000, #15000
+      FiringRandomness = 0.5, #0.25
+      MaxRadius = 750, #1800
+      MinRadius = 125, #175
+      MuzzleChargeDelay = 0.6, #0.5
+      MuzzleVelocity = 65, #98
+      MuzzleVelocityReduceDistance = 750, #1750
+      RateOfFire = 0.25, #0.32
+      RackRecoilDistance = -0.25, #-0.5
+      TurretPitchRange = 15, #90
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xab3301", #Eye of Rhianne Quantum Optics Facility
+  Categories = {
+    'PRODUCTFA', 'SELECTABLE', 'BUILTBYTIER3ENGINEER',
+    'BUILTBYTIER3COMMANDER', 'AEON', 'INTELLIGENCE',
+    'STRUCTURE', 'TECH3', 'SIZE20',
+    'OPTICS', 'VISIBLETORECON', 'RECLAIMABLE',
+    'ABILITYBUTTON', 'SORTINTEL',
+  },
+  Defense = {
+    Health = 500, MaxHealth = 500, #250
+  },
+  Intel = {
+    Cooldown = 45, #Custom Var
+  },
+}

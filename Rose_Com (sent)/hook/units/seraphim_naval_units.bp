@@ -1,0 +1,225 @@
+-- Seraphim T1 Naval Units ------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "xss0203", #Sou-istle Attack Submarine
+  Defense = {
+    Health = 450, MaxHealth = 450, #400
+  },
+  Physics = {
+    MaxAcceleration = 4, #6
+    MaxBrake = 4, #6
+    MaxSpeed = 4, #6
+    MaxSpeedReverse = 4, #6
+  },
+  Weapon = {
+    { #Torpedoes
+      MuzzleSalvoDelay = 0.4, #0.8
+    },
+    { #AntiTorpedo
+      MaxRadius = 30, #32
+      MinRadius = 8, #0
+    },
+    { #Surface Gun
+      MaxRadius = 28, #32
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xss0103", #Hau-esel Frigate
+  Physics = {
+    MaxAcceleration = 5.5, #6
+    MaxBrake = 5.5, #6
+    MaxSpeed = 5.5, #6
+    MaxSpeedReverse = 5.5, #6
+  },
+  Weapon = {
+    { #Surface Gun
+      MuzzleChargeDelay = 0, #0.1
+      MuzzleSalvoDelay = 0.1, #0.25
+      RateOfFire = 1, #0.9
+    },
+    { #AA Turret
+      Damage = 4, #1
+    },
+  },
+}
+
+-- Seraphim T2 Naval Units ------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "xss0202", #Ithalua Cuiser
+  Intel = {
+    RadarRadius = 152, #150
+  },
+  Weapon = {
+    { #Laanse TML
+      MinRadius = 12.5, #nil
+    },
+    { #Olaris AA Artillery Cannon
+      Damage = 72, #96
+      MaxRadius = 55, #65
+      MuzzleVelocity = 30, #20
+    },
+    { #AA Gattling Gun
+      MaxRadius =55, #45
+    },
+    { #Ele-athrun TMD
+    },
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "xss0201", #Uashavoh Destroyer
+  Defense = {
+    AirThreatLevel = 0, #8
+  },
+  StrategicIconName = 'icon_sub2_antinavy', #'icon_ship2_antinavy'
+  Weapon = {
+    { #Front Turret
+    },
+    { #Back Turret
+      Audio = {
+        BeamStart = Sound {
+          Bank = 'XSS_Weapon',
+          Cue = 'XSS0201_Ultrachromatic_Beam_Start', #'UAL0401_Phason_Laser_Fire'
+          LodCutoff = 'Weapon_LodCutoff',
+        },
+        BeamStop = Sound {
+          Bank = 'XSS_Weapon',
+          Cue = 'XSS0201_Ultrachromatic_Beam_Stop', #'UAL0401_Phason_Laser_Stop'
+          LodCutoff = 'Weapon_LodCutoff',
+        },
+      },
+      Damage = 47, #42
+    },
+    { #Torpedoes
+      Damage = 100, #80
+      MuzzleSalvoDelay = 0.4, #0.8
+    },
+    { #Torpedo Defense
+      MaxRadius = 32, #45
+      MinRadius = 10, #15
+    },
+  },
+}
+
+-- Seraphim T3 Naval Units ------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "xss0303", #Iavish Aircraft Carrier
+  Economy = {
+    BuildRate = 160, #150
+  },
+  Weapon = {
+    { #Laanse TML
+      MinRadius = 12, #Null
+    },
+    { #Losaare AA Autocannon
+    },
+    { #Losaare AA Autocannon
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xss0302", #Hauthuum Battleship
+  AI = {
+    AttackAngle = 90, #60
+  },
+  Audio = {
+    NuclearLaunchDetected = Sound {
+      Bank = 'XGG',
+      Cue = 'Computer_Computer_MissileLaunch_01351',
+    },
+    NukeCharge = Sound {
+      Bank = 'XSB',
+      Cue = 'XSB2305_Nuke_Charge',
+      LodCutoff = 'UnitMove_LodCutoff',
+    },
+  },
+  Defense = {
+    AirThreatLevel = 12, #16
+  },
+  Economy = {
+    BuildCostEnergy = 90000, #75000
+  },
+  Physics = {
+    MaxAcceleration = 3.5, #3
+    MaxBrake = 3.5, #3
+    MaxSpeed = 3.5, #3
+    MaxSpeedReverse = 3.5, #3
+  },
+  Weapon = {
+    { #Heavy Quarnon Cannon
+    },
+    { #Heavy Quarnon Cannon
+    },
+    { #Heavy Quarnon Cannon
+    },
+    { #Ele-athrun TMD
+    },
+    { #Ele-athrun TMD
+    },
+    { #Olaris AA Artillery
+      Damage = 24, #8
+      DamageRadius = 4, #2
+      MaxRadius = 55, #40
+      MuzzleVelocity = 30, #20
+      RateOfFire = 1, #0.9
+    },
+    { #Olaris AA Artillery
+      Damage = 24, #8
+      DamageRadius = 4, #2
+      MaxRadius = 55, #40
+      MuzzleVelocity = 30, #20
+      RateOfFire = 1, #0.9
+    },
+    { #Inaino SML
+      RangeCategory = '', #'UWRC_IndirectFire'
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xss0304", #Yathsou Submarine Hunter
+  Categories = {
+    'PRODUCTFA',
+    'SELECTABLE',
+    'BUILTBYTIER3FACTORY',
+    'BUILTBYEXPERIMENTALSUB',
+    'SERAPHIM',
+    'MOBILE',
+    'NAVAL',
+    'TECH3',
+    'ANTINAVY',
+    'SUBMERSIBLE',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    #'NUKESUB',
+    'OVERLAYSONAR',
+    'OVERLAYANTIAIR',
+    'OVERLAYDEFENSE',
+    'OVERLAYANTINAVY',
+  },
+  Defense = {
+    AirThreatLevel = 10, #0
+    SubThreatLevel = 27, #0
+  },
+  Physics = {
+    MaxAcceleration = 8, #6
+    MaxBrake = 8, #6
+    MaxSpeed = 8, #6
+    MaxSpeedReverse = 8, #6
+  },
+  Weapon = {
+    { #Torpedoes
+      Damage = 445, #335
+      MuzzleSalvoDelay = 0.4, #1
+      MuzzleSalvoSize = 3, #4
+    },
+    { #AntiTorpedo
+      MinRadius = 8, #0
+      MaxRadius = 30, #32
+    },
+    { #AntiTorpedo
+      MinRadius = 8, #0
+      MaxRadius = 30, #32
+    },
+    { #AA Autocannon
+      RateOfFire = 1.5, #2
+    },
+  },
+}

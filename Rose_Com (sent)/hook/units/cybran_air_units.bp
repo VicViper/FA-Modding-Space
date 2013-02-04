@@ -1,0 +1,320 @@
+-- Cybran T1 Air Units -------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "ura0101", #Flying Eyes Air Scout
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildCostEnergy = 1200, #1600
+    BuildCostMass = 30, #40
+    BuildTime = 300, #400
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "ura0102", #Prowler Interceptor
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Weapon = {
+    {
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+    {
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "ura0103", #Zeus Attack Bomber
+  Air = {
+    AutoLandTime = 4, #1
+    PredictAheadForBombDrop = 3, #(CBF)
+    MaxAirspeed = 11, #10
+  },
+  Weapon = {
+    {
+      FiringTolerance = 6, #(CBF)
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xra0105", #Jester Light Gunship
+  Air = {
+    AutoLandTime = 6, #1
+    MaxAirspeed = 9, #12
+  },
+  Defense = {
+    Health = 475, #525
+    MaxHealth = 475,
+  },
+  Economy = {
+    BuildCostEnergy = 4000, #5000
+    BuildCostMass = 160, #200
+    BuildTime = 800, #1000
+  },
+  SelectionSizeX = 0.5, #0.6
+  SelectionSizeZ = 0.7, #0.9 
+  Weapon = {
+    {
+      Damage = 12, #16
+      MaxRadius = 18, #16
+      TargetPriorities = {
+        'SPECIALHIGHPRI',
+        'MOBILE ANTIAIR', #Ianz
+        'SPECIALLOWPRI',
+        'ALLUNITS',
+      },
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "ura0107", #Skyhook Light Air Transport
+  Air = {
+    KTurn = 1.8, #1
+    KTurnDamping = 2.7, #4
+  },
+  Defense = {
+    AirThreatLevel = 2, #4
+    Health = 750, #500
+    MaxHealth = 750,
+  },
+  Economy = {
+    BuildCostMass = 160, #120
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 3, #2
+  },
+}
+
+-- Cybran T2 Air Units ----------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "ura0104", #Dragon Fly Air Transport
+  Air = {
+    KTurn = 1.8, #1
+    KTurnDamping = 2.7, #4
+    MaxAirspeed = 10, #15
+  },
+  Defense = {
+    AirThreatLevel = 3, #1.5
+    Health = 2275, #1525
+    MaxHealth = 2275,
+  },
+  Economy = {
+    BuildCostMass = 480, #300
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Attack = false, #true
+      RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 3, #2
+  },
+  Weapon = {
+    { #Disintegrator Pulse Laser
+    },
+    { #AA Autocannon
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+      MaxRadius = 30, #20
+    },
+    { #Crash
+      AboveWaterTargetsOnly = true,
+      Damage = 250,
+      DamageFriendly = true,
+      DamageRadius = 1,
+      DamageType = 'Normal',
+      DisplayName = 'Air Crash',
+      DummyWeapon = true,
+      FiringTolerance = 2,
+      Label = 'DeathImpact',
+      WeaponCategory = 'Death',
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "ura0203", #Renegade Gunship
+  Air = {
+    AutoLandTime = 6, #1
+    MaxAirspeed = 11, #12
+  },
+  Economy = {
+    BuildCostEnergy = 6400, #6000
+    BuildCostMass = 320, #300
+    BuildTime = 1600, #2000
+  },
+  SelectionSizeX = 0.65, #0.45
+  SelectionSizeZ = 1, #1.1
+  Weapon = {
+    {
+      AlwaysRecheckTarget = true, #nil
+      MuzzleSalvoDelay = 0.2, #0.3
+      MuzzleSalvoSize = 4, #3
+      TargetPriorities = {
+        'SPECIALHIGHPRI',
+        'MOBILE ANTIAIR', #Ianz
+        'SPECIALLOWPRI',
+        'ALLUNITS',
+      },
+      RateOfFire = 0.75, #1
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "ura0204", #Commorant Torpedo Bomber
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildTime = 1200, #1600
+  },
+  Weapon = {
+    {
+      FiringTolerance = 6, #(CBF)
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "dra0202", #Corsair Multirole Fighter #ALSO SEE SCRIPT CHANGES
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildCostEnergy = 12600, #8400
+  },
+  Physics = {
+    AttackElevation = 18, #10?
+  },
+  Weapon = {
+    { #Nanite Missile System
+      Damage = 38, #38
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+      FiringTolerance = 50, #2
+      MuzzleSalvoDelay = 0.2, #0.3
+      ProjectlieLifetime = 4, #4 #6
+      RackSalvoReloadTime = 0, #1
+      TrackingRadius = 1.25, #2.5
+    },
+    { #Corsair Missile System
+      Damage = 110, #150
+      FiringTolerance = 6, #(CBF)
+      RangeCategory = '', #'UWRC_DirectFire'
+      TrackingRadius = 1.25, #0.8
+      WeaponCategory = 'Bomb', #'DirectFire'
+    },
+    { #Crash
+    },
+  },
+}
+
+-- Cybran T3 Air Units -------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "ura0302", #Spook Spy Plane
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildCostEnergy = 5250, #5000
+    BuildCostMass = 180, #195
+    BuildTime = 1200, #900
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "ura0304", #Revenant Strategic Bomber
+  Air = {
+    AutoLandTime = 4, #1
+    PredictAheadForBombDrop = 3, #(CBF) #2
+  },
+  Economy = {
+    BuildCostEnergy = 67200, #70000
+  },
+  Weapon = {
+    { #Bomb
+      FiringTolerance = 6, #(CBF 6) #3
+    },
+    { #AA
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+    { #AA
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "ura0303", #Gemini Air Superiority Fighter
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildCostEnergy = 21600, #20000
+    BuildCostMass = 480, #400
+    BuildTime = 3200, #3000
+  },
+  Weapon = {
+    { #Nanite Missile Launcher
+      Damage = 75, #100
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+    { #Nanite Missile Launcher
+      Damage = 75, #100
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+    { #Crash
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xra0305", #Wailer Heavy Gunship
+  Air = {
+    AutoLandTime = 6, #1
+  },
+  Economy = {
+    BuildCostEnergy = 37800, #35000
+  },
+  Weapon = {
+    { #Laser
+      TargetPriorities = {
+        'SPECIALHIGHPRI',
+        'MOBILE ANTIAIR', #Ianz
+        'SPECIALLOWPRI',
+        'ALLUNITS',
+      },
+    },
+    { #AA Missiles
+      Damage = 12, #6
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+      RateOfFire = 0.5, #1
+    },
+    { #Crash
+      Damage = 300, #100
+    },
+  },
+}

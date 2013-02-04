@@ -1,0 +1,212 @@
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/SIFLaanseTacticalMissile02/SIFLaanseTacticalMissile02_proj.bp", #UEF Cruiser Missile
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/TIFMissileCruise04/TIFMissileCruise04_proj.bp", #Seraphim Cruiser Missile
+  Physics = {
+    Accleration = 5, #3?
+    MaxSpeed = 18, #12
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/CIFMissileTactical01/CIFMissileTactical01_proj.bp", #Cybran Viper Missile
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/TIFMissileCruise03/TIFMissileCruise03_proj.bp", #UEF Flapjack Missile
+  Display = {
+    UniformScale = 0.15, #0.2
+  },
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  }
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/TIFMissileCruise05/TIFMissileCruise05_proj.bp", #UEF Spearhead Missile
+  Display = {
+    UniformScale = 0.15, #0.2
+  },
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  }
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/SIFLaanseTacticalMissile01/SIFLaanseTacticalMissile01_proj.bp", #Seraphim MML Missile
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/AIFMissileSerpentine01/AIFMissileSerpentine01_proj.bp", #Aeon Evensong Missile
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/SIFLaanseTacticalMissile04/SIFLaanseTacticalMissile04_proj.bp", #Seraphim TML Missile
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/TIFMissileCruise01/TIFMissileCruise01_proj.bp", #UEF TML Missile
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/CIFMissileTactical03/CIFMissileTactical03_proj.bp", #Cybran TML-4 Missile
+  Defense = {
+      Health = 1, #2
+      MaxHealth = 1,
+  },
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/AIFMissileTactical01/AIFMissileTactical01_proj.bp", #Aeon TML Missile
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/SIFLaanseTacticalMissileCDR/SIFLaanseTacticalMissileCDR_proj.bp", #Seraphim ACU Missile
+  Display = {
+    StrategicIconSize = 4, #2
+  },
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/SIFLaanseTacticalMissileSCU/SIFLaanseTacticalMissileSCU_proj.bp", #Seraphim SACU Missile
+  Display = {
+    StrategicIconSize = 4, #2
+  },
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/TIFMissileCruiseCDR/TIFMissileCruiseCDR_proj.bp", #UEF ACU Tac Missile
+  Display = {
+    StrategicIconSize = 4, #2
+  },
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/TIFMissileNukeCDR/TIFMissileNukeCDR_proj.bp", #UEF ACU Nuke Missile
+  Display = {
+    StrategicIconSize = 4, #2
+  },
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/TIFMissileCruise02/TIFMissileCruise02_proj.bp", #UEF Strategic Sub Missile
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/CIFMissileTactical02/CIFMissileTactical02_proj.bp", #Cybran Strategic Sub Missile
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/AIFMissileSerpentine02/AIFMissileSerpentine02_proj.bp", #Aeon Strategic Sub Missile
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/AIFMissileSerpentine03/AIFMissileSerpentine03_proj.bp", #Aeon Missile Ship Missile
+  Physics = {
+    Acceleration = 5, #1.5?
+    MaxSpeed = 18, #30?
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/SIFLaanseTacticalMissile03/SIFLaanseTacticalMissile03_proj.bp", #Seraphim Carrier Missile
+  Physics = {
+    Acceleration = 5, #3
+    MaxSpeed = 18, #12
+  },
+}
+
+ProjectileBlueprint {
+  Merge = true,
+  Source = "/projectiles/CDFRocketMeson01/CDFRocketMeson01_proj.bp", #Wagner Rocket
+  Physics = {
+    Acceleration = 5,
+    MaxSpeed = 18,
+    RotationalVelocity = 250, #500
+    #TurnRate = 180, #0 #///does not seem to work///
+  },
+}

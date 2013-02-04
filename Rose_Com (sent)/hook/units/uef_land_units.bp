@@ -1,0 +1,382 @@
+-- UEF Engineering Land Units ---------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "uel0105", #UEF T1 Engineer
+  Categories = {
+    'SORTDEFENSE', #Ianz
+  },
+  General = {
+    SelectionPriority = 4, #3
+  },
+  Physics = {
+    BackUpDistance = 6, #4
+    MaxAcceleration = 3, #1.9
+    MaxBrake = 3, #1.9
+    MaxSpeed = 2.2, #1.9
+    MaxReverseSpeed = 1.7, #1.4
+    TurnRate = 180, #120
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uel0208", #UEF T2 Engineer
+  Categories = {
+    'SORTDEFENSE', #Ianz
+  },
+  General = {
+    SelectionPriority = 4, #3
+  },
+  Physics = {
+    BackUpDistance = 6, #4
+    MaxAcceleration = 3, #1.9
+    MaxBrake = 3, #1.9
+    MaxSpeed = 2.2, #1.9
+    MaxReverseSpeed = 1.7, #1.4
+    TurnRate = 180, #120
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xel0209", #UEF Sparky Field Engineer
+  Categories = {
+    'SORTDEFENSE', #Ianz
+  },
+  General = {
+    BuildBones = {
+      YawBone = 'Arm02', #'XEL0209'
+    },
+    SelectionPriority = 4, #3
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uel0309", #UEF T3 Engineer
+  Categories = {
+    'SORTDEFENSE', #Ianz
+  },
+  Economy = {
+    BuildRate = 20, #15
+  },
+  General = {
+    SelectionPriority = 4, #3
+  },
+  Physics = {
+    BackUpDistance = 6, #4
+    MaxAcceleration = 3, #1.9
+    MaxBrake = 3, #1.9
+    MaxSpeed = 2.2, #1.9
+    MaxReverseSpeed = 1.7, #1.4
+    TurnRate = 180, #120
+  },
+}
+
+-- UEF T1 Land Units ------------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "uel0101", #UEF Snoop Land Scout
+  Weapon = {
+    {
+      RateOfFire = 2, #0.5
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uel0106", #UEF Mech Marine Light Assault Bot
+  Audio = {
+    Killed = Sound {
+      Bank = 'UELDestroy',
+      Cue = 'UEL_Destroy_Sml_Land',
+      LodCutoff = 'UnitMove_LodCutoff',
+    },
+  },
+  Transport = {
+    CanFireFromTransport = false, #true
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uel0201", #UEF MA12 Striker Medium Tank
+  Display = {
+    MovementEffects = {
+      Land = {
+        Treads = {
+          TreadMarks = {
+            {
+              TreadMarksSizeX = 0.55, #0.5
+            },
+          },
+        },
+      },
+    },
+    UniformScale = 0.077,
+  },
+  Economy = {
+    BuildCostEnergy = 252, #266
+  },
+  SizeX = 0.77, #0.7
+  SizeY = 0.55, #0.5
+  SizeZ = 0.99, #0.9
+  Weapon = {
+    {
+      RackRecoilDistance = -1, #-2
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uel0103", #UEF Lobo Mobile Light Artillery
+  Weapon = {
+    {
+      RackRecoilDistance = -1, #-3
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uel0104", #UEF Archer Mobile Anti-Air Gun
+  Defense = {
+    Health = 160, #200
+    MaxHealth = 160,
+  },
+  Weapon = {
+    {
+      Damage = 10, #8
+    },
+  },
+}
+
+-- UEF T2 Land Units ------------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "del0204", #UEF Mongoose Gattling Bot
+  Audio = {
+    Destroyed = Sound {
+      Bank = 'UELDestroy',
+      Cue = 'UEL_Destroy_Sml_Land',
+      LodCutoff = 'UnitMove_LodCutoff',
+    },
+  },
+  Display = {
+    AnimationWalkRate = 5.3, #3 #5.8
+    UniformScale = 0.045, #0.04
+  },
+  Physics = {
+    MaxAcceleration = 3.2, #3.6
+    MaxBrake = 3.2, #3.6
+    MaxSpeed = 3.2, #3.6
+  },
+  SelectionSizeX = 0.7, #0.6
+  SelectionSizeZ = 0.6, #0.5
+  SizeX = 0.78, #0.7
+  SizeY = 1.125, #1
+  SizeZ = 0.45, #0.4
+  Weapon = {
+    { 
+      AimsStraightOnDisable = true, #false
+      TurretYawSpeed = 90, #50
+    },
+    { 
+      AimsStraightOnDisable = true, #false
+      RateOfFire = 0.125, #0.1
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uel0202", #UEF Pillar Heavy Tank
+  Weapon = {
+    {
+      RackRecoilDistance = -1, #-3
+    },
+  },
+}
+
+UnitBlueprint {
+  Merge = true,
+  BlueprintId = "uel0203", #UEF Riptide Amphibious Tank
+  Defense = {
+    Health = 1500, #1700
+    MaxHealth = 1500,
+  },
+  Display = {
+    UniformScale = 0.12, #0.09
+  },
+  Economy = {
+    BuildCostEnergy = 1980, #1980
+    BuildCostMass = 330, #363
+    BuildTime = 1320, #1320
+  },
+  SelectionSizeX = 0.62, #0.5
+  SelectionSizeZ = 0.85, #0.7 #0.9
+  SelectionThickness = 0.45, #0.6
+  SizeX = 1.2, #0.9
+  SizeY = 0.6, #0.45
+  SizeZ = 1.6, #1.2
+  Weapon = {
+    {
+      Damage = 15, #13.5
+      #MuzzleSalvoDelay = 0, #0 #///NEEDS MORE TESTING///
+      #MuzzleSalvoSize = 2, #1
+      RackRecoilDistance = 0, #0.1
+      RateOfFire = 2.5, #3
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uel0111", #UEF Flapjack Mobile Missile Launcher
+  Weapon = {
+    {
+      Damage = 200, #200
+      MuzzleVelocity = 0, #3
+      RateOfFire = 0.25, #0.2
+      WeaponUnpackAnimationRate = 2, #1
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uel0307", #UEF Parashield Mobile Shield Generator
+  Defense = {
+    Shield = {
+      ShieldVerticalOffset = -1, #-3
+    },
+  },
+  Physics = {
+    MaxAcceleration = 3.5, #4
+    MaxBrake = 3.5, #4
+    MaxSpeed = 3.5, #4
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uel0205", #UEF Sky Boxer Mobile Anti-Air Flak Artillery
+  Defense = {
+    AirTreatLevel = 5, #3
+    Health = 850, #1000
+    MaxHealth = 850,
+  },
+  Display = {
+    MovementEffects = {
+      Land = {
+        Treads = {
+          TreadMarks = {
+            {
+              TreadMarksSizeX = 0.625, #0.5
+            },
+          },
+        },
+      },
+    },
+    UniformScale = 0.25, #0.2
+  },
+  Economy = {
+    BuildCostEnergy = 1200, #800
+  },
+  SelectionSizeX = 0.56, #0.45
+  SelectionSizeZ = 0.81, #0.65
+  SelectionThickness = 0.45, #0.66
+  SizeX = 0.72, #0.6
+  SizeY = 0.5, #0.4
+  SizeZ = 1.05, #0.85
+  Weapon = {
+    {
+      Damage = 45, #36
+      RateOfFire = 1, #2
+      MuzzleVelocity = 30, #20
+    },
+  },
+}
+
+-- UEF T3 Land Units ------------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "xel0305", #UEF Perceval Armored Assault Bot
+  Audio = {
+    Destroyed = Sound {
+      Bank = 'UELDestroy',
+      Cue = 'UEL_Destroy_Huge',
+      LodCutoff = 'UnitMove_LodCutoff',
+    },
+  },
+  Display = {
+    AnimationWalkRate = 3, #2
+    UniformScale = 0.075, #0.063
+  },
+  Economy = {
+    BuildCostEnergy = 14400, #14000
+    BuildCostMass = 1320, #1280
+  },
+  Physics = {
+    MaxSpeedReverse = 0, #2
+  },
+  SelectionSizeX = 0.7, #0.55
+  SelectionSizeZ = 0.65, #0.5
+  SizeX = 0.95, #0.8
+  SizeY = 1.9, #1.6
+  SizeZ = 0.95, #0.8
+  Weapon = {
+    {
+      FireTargetLayerCapsTable = {
+        Land = 'Land|Water|Seabed',
+        Seabed = 'None', #'Land|Water|Seabed',
+        Water = 'Land|Water|Seabed',
+      },
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uel0303", #UEF Titan Heavy Assault Bot
+  Audio = {
+    Destroyed = Sound {
+      Bank = 'UELDestroy',
+      Cue = 'UEL_Destroy_Huge',
+      LodCutoff = 'UnitMove_LodCutoff',
+    },
+  },
+  Defense = {
+    Shield = {
+      ShieldRegenRate = 25, #9
+      ShieldRegenStartTime = 12, #3
+    },
+  },
+  Display = {
+    AnimationWalkRate = 6.5, #5
+    UniformScale = 0.85, #0.7
+  },
+  Physics = {
+    MaxAcceleration = 2.5, #4
+    MaxBrake = 2.5,
+    MaxSpeed = 2.5,
+  },
+  SelectionCenterOffsetZ = -0.4, #-0.25
+  SelectionSizeX = 0.67, #0.55
+  SelectionSizeZ = 0.61, #0.5
+  SizeX = 1.09, #0.9
+  SizeY = 1.46, #1.2
+  SizeZ = 1.09, #0.9
+  Weapon = {
+    {
+      Damage = 75, #50
+      RateOfFire = 2, #3
+      MaxRadius = 25, #20
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uel0304", #UEF Demolisher Mobile Heavy Artillery
+  Economy = {
+    BuildCostEnergy = 8400, #8000
+    BuildCostMass = 840, #800
+  },
+  Weapon = {
+    {
+      BallisticArc = 'RULEUBA_LowArc', #'RULEUBA_HighArc'
+      MinRadius = 8, #0
+      RackRecoilDistance = -5, #-10
+      WeaponUnpackAnimationRate = 1, #2
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xel0306", #UEF Spearhead Mobile Missile Platform
+  Economy = {
+    BuildCostEnergy = 3600, #3000
+    BuildCostMass = 420, #400
+  },
+  Weapon = {
+    {
+      MaxRadius = 75, #80
+      MuzzleChargeDelay = 0.8, #1
+      MuzzleVelocity = 0, #3
+      RackSalvoReloadTime = 10.3, #10
+      RateOfFire = 0.08, #0.1
+    },
+  },
+}

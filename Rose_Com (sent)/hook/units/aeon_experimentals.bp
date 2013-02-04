@@ -1,0 +1,223 @@
+-- Galactic Collosus ------------------------------------------------------------------------------------------------
+#When i first saw the new GC i was annoyed by two things: first it was far too fast for something of its size and
+# second it could actually be killed. so i decided to fix them both and restore it to its original awsomeness.
+UnitBlueprint { Merge = true, BlueprintId = "ual0401", #Galactic Collosus Experimental Assault Bot
+  AI = {
+    TargetBones = {
+      'Head_Muzzle',
+      'Torso',
+      'Projectile01',
+      'Left_Leg_B01',
+      'Right_Leg_B01',
+    },
+  },
+  Categories = {
+    'PRODUCTSC1', 'SELECTABLE', 'BUILTBYTIER3COMMANDER',
+    'BUILTBYTIER3ENGINEER', 'AEON', 'MOBILE',
+    'LAND', 'DIRECTFIRE', 'EXPERIMENTAL',
+    'NEEDMOBILEBUILD', 'VISIBLETORECON', 'RECLAIMABLE',
+    'OVERLAYDIRECTFIRE', 'OVERLAYOMNI', 'SORTDEFENSE',
+  },
+  Defense = {
+    Health = 200000, MaxHealth = 200000 #99999
+  },
+  Display = {
+    AnimationWalkRate = 1, #2
+  },
+  Economy = {
+    BuildCostEnergy = 843750, #281250 (x3)
+    BuildCostMass = 67500, #22500 (x3)
+    BuildTime = 67500, #16875 (X4)
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Guard = false, #true
+      RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 2, #nil
+  },
+  Physics = {
+    MaxAcceleration = 0.75, #2.5
+    MaxBrake = 0.75, #2.5
+    MaxSpeed = 1.25, #2.5
+    TurnRadius = 5, #3
+    TurnRate = 20, #40
+  },
+  Veteran = {
+    Level1 = 100, #50
+    Level2 = 200,
+    Level3 = 300,
+    Level4 = 400,
+    Level5 = 500,
+  },
+  Weapon = {
+    { #Phason Laser
+      Damage = 500, #500
+    },
+    { #Right Tractor Claw
+      RateOfFire = 0.5, #1
+    },
+    { #Left Tractor Claw
+      RateOfFire = 0.5, #1
+    },
+    { #Death Explosion
+    },
+  },
+  Wreckage = {
+    ReclaimTimeMultiplier = 4, #1
+  },
+}
+
+-- Tempest ----------------------------------------------------------------------------------------------------------
+#Nothing out of the ordinary here. just the regular changes: increase cost, build time, veterancy requirements, armour
+UnitBlueprint { Merge = true, BlueprintId = "uas0401", #Tempest Experimental Battleship
+  Categories = {
+    'PRODUCTSC1', 'SELECTABLE', 'BUILTBYTIER3COMMANDER',
+    'BUILTBYTIER3ENGINEER', 'AEON', 'MOBILE', 'NAVAL',
+    'EXPERIMENTAL', 'DIRECTFIRE', 'SUBMERSIBLE',
+    'INTELLIGENCE', 'FACTORY', 'CARRIER', 'NEEDMOBILEBUILD',
+    'VISIBLETORECON', 'RECLAIMABLE', 'SHOWATTACKRETICLE',
+    'BATTLESHIP', 'SHOWQUEUE', 'OVERLAYRADAR',
+    'OVERLAYSONAR', 'OVERLAYDEFENSE', 'OVERLAYANTINAVY',
+    'OVERLAYDIRECTFIRE', 'SORTDEFENSE',
+  },
+  Defense = {
+    Health = 70000, MaxHealth = 70000, #35000
+  },
+  Economy = {
+    BuildCostEnergy = 700000, #350000 (x2)
+    BuildCostMass = 56000, #28000 (x2)
+    BuildTime = 48000, #12000 (x4)
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Guard = false, #true
+      RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 2, #nil
+  },
+  Veteran = {
+    Level1 = 45, #30
+    Level2 = 90,
+    Level3 = 135,
+    Level4 = 180,
+    Level5 = 225,
+  },
+  Weapon = {
+    { #Oblivion Cannon
+      Damage = 8000, #6000
+    },
+    { #Heavy Chrono Torpedoes
+    },
+    { #Quasar Anti Torpedo
+    },
+  },
+}
+
+-- CZAR -------------------------------------------------------------------------------------------------------------
+#I changed this one similar to the soul ripper slower but with more health. I personally like the 'Flying Fortress'
+# style CZAR more than the newer laser your base and ignore the carrier ability style CZAR
+UnitBlueprint { Merge = true, BlueprintId = "uaa0310", #CZAR Experimental Aircraft Carrier
+  Air = {
+    KLift = 1, #2
+    MaxAirspeed = 4, #8
+  },
+  Categories = {
+    'PRODUCTSC1', 'SELECTABLE', 'BUILTBYTIER3COMMANDER',
+    'BUILTBYTIER3ENGINEER', 'AEON', 'MOBILE', 'AIR',
+    'HIGHALTAIR', 'EXPERIMENTAL', 'AIRSTAGINGPLATFORM',
+    'CARRIER', 'NEEDMOBILEBUILD', 'VISIBLETORECON',
+    'RECLAIMABLE', 'FACTORY', 'TARGETCHASER', 
+    'SHOWATTACKRETICLE', 'SHOWQUEUE', 'OVERLAYANTIAIR',
+    'OVERLAYANTINAVY', 'OVERLAYRADAR', 'OVERLAYSONAR',
+    'OVERLAYMISC', 'CANNOTUSEAIRSTAGING', 'SORTDEFENSE',
+  },
+  Defense = {
+    Health = 72000, MaxHealth = 72000, #48000 (x1.5)
+  },
+  Economy = {
+    BuildCostEnergy = 1462500, #721250 (x2)
+    BuildCostMass = 90000, #45000 (x2)
+    BuildRate = 200, #180
+    BuildTime = 101250, #33750 (x3)
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Guard = false, #true
+      RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 2, #nil
+  },
+  Intel = {
+    VisionRadius = 100, #70
+  },
+  Veteran = {
+    Level1 = 80, #40
+    Level2 = 160,
+    Level3 = 240,
+    Level4 = 320,
+    Level5 = 400,
+  },
+  Weapon = {
+    { #Quantum Beam Generator
+      MaxRadius = 15, #30
+    },
+    { #Left Turret 1
+    },
+    { #Left Turret 3
+    },
+    { #Right Turret 1
+    },
+    { #Right Turret 3
+    },
+    { #Harmonic Depth Charge 1
+      RateOfFire = 0.5, #0.25
+    },
+    { #Harmonic Depth Charge 2
+      RateOfFire = 0.5, #0.25
+    },
+    { #Left Fizz Launcher
+      Damage = 120, #240
+      MuzzleVelocity = 30, #20
+    },
+    { #Left Fizz Launcher
+      Damage = 120, #240
+      MuzzleVelocity = 30, #20
+    },
+    { #Crash
+    },
+  },
+  Wreckage = {
+    ReclaimTimeMultiplier = 4, #1
+  },
+}
+
+-- Paragon ----------------------------------------------------------------------------------------------------------
+# I figure it should stay the same. It is really just a way to end the game after two hours if neither player can
+#  figure out how to kill the other. I might actually decrease the cost of this one because most people who need to
+#  get one wouldnt really know how to use the resources
+UnitBlueprint { Merge = true, BlueprintId = "xab1401", #Paragon Experimintal Resource Generator
+  Categories = {
+    'PRODUCTFA', 'SELECTABLE', 'BUILTBYTIER3ENGINEER',
+    'BUILTBYTIER3COMMANDER', 'AEON', 'STRUCTURE',
+    'ECONOMIC', 'EXPERIMENTAL', 'ENERGYPRODUCTION',
+    'MASSPRODUCTION', 'MASSFABRICATION', 'SIZE12',
+    'VISIBLETORECON', 'RECLAIMABLE', 'SORTSTRATEGIC',
+  },
+  Defense = {
+    Health = 7500, MaxHealth = 7500, #5000
+  },
+  Wreckage = {
+    ReclaimTimeMultiplier = 4, #1
+  },
+  Weapon = {
+    {
+      NukeInnerRingDamage = 24000, #35000
+      NukeInnerRingRadius = 15, #25
+      #NukeInnerRingTotalTime = 4, #0
+      NukeOuterRingDamage = 250, #35000
+      NukeOuterRingRadius = 25, #25
+      #NukeOuterRingTotalTime = 16, #0
+    },
+  },
+}

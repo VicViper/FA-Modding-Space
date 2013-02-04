@@ -1,0 +1,437 @@
+-- Cybran Engineering Land Units ------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "url0105", #T1 Engineer
+  Categories = {
+    'SORTECONOMY', #Ianz
+  },
+  Display = {
+    MovementEffects = {
+      Land = {
+        Treads = {
+          TreadMarks = {
+            {
+              TreadMarksSizeX = 0.55, #0.5
+            },
+          },
+        },
+      },
+    },
+  },
+  General = {
+    SelectionPriority = 4, #3
+  },
+  Physics = {
+    BackUpDistance = 6, #4
+    MaxAcceleration = 3, #1.9
+    MaxBrake = 3, #1.9
+    MaxSpeed = 2.2, #1.9
+    MaxReverseSpeed = 1.9, #1.7
+    TurnRate = 180, #120
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "url0208", #T2 Engineer
+  Categories = {
+    'SORTECONOMY', #Ianz
+  },
+  Display = {
+    MovementEffects = {
+      Land = {
+        Treads = {
+          TreadMarks = {
+            {
+              TreadMarksSizeX = 0.75, #0.65
+            },
+          },
+        },
+      },
+    },
+  },
+  General = {
+    SelectionPriority = 4, #3
+  },
+  Physics = {
+    BackUpDistance = 6, #4
+    MaxAcceleration = 3, #1.9
+    MaxBrake = 3, #1.9
+    MaxSpeed = 2.2, #1.9
+    MaxReverseSpeed = 1.9, #1.7
+    TurnRate = 180, #120
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "url0309", #T3 Engineer
+  Categories = {
+    'SORTECONOMY', #Ianz
+  },
+  Display = {
+    MovementEffects = {
+      Land = {
+        Treads = {
+          TreadMarks = {
+            {
+              TreadMarksSizeX = 1, #0.8
+            },
+          },
+        },
+      },
+    },
+  },
+  Economy = {
+    BuildRate = 20, #15
+  },
+  General = {
+    SelectionPriority = 4, #3
+  },
+  Physics = {
+    BackUpDistance = 6, #4
+    MaxAcceleration = 3, #1.9
+    MaxBrake = 3, #1.9
+    MaxSpeed = 2.2, #1.9
+    MaxReverseSpeed = 1.9, #1.7
+    TurnRate = 180, #120
+  },
+}
+
+-- Cybran T1 Land Units ---------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "url0101", #Mole Land Scout
+  Audio = {
+    Killed = Sound {
+      Bank = 'URLDestroy',
+      Cue = 'URL_Destroy_Land',
+      LodCutoff = 'UnitMove_LodCutoff',
+    },
+  },
+  StrategicIconName = 'icon_bot1_intel', #'icon_land1_intel',
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "url0106", #Hunter Light Assault Bot
+  Audio = {
+    Killed = Sound {
+      Bank = 'URLDestroy',
+      Cue = 'URL_Destroy_Land',
+      LodCutoff = 'UnitMove_LodCutoff',
+    },
+  },
+  Transport = {
+    CanFireFromTransport = false, #true
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "url0107", #Mantis Assault Bot
+  Audio = {
+    Killed = Sound {
+      Bank = 'URLDestroy',
+      Cue = 'URL_Destroy_Land',
+      LodCutoff = 'UnitMove_LodCutoff',
+    },
+  },
+  Display = {
+    AnimationWalkRate = 5.5, #8 #6?
+  },
+  Physics = {
+    TurnRadius = 1, #2
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "url0103", #Medusa Mobile Light Artillery
+  Weapon = {
+    {
+      RackRecoilDistance = 0, #-1
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "url0104", #Sky Slammer Mobile Anti-Air Gun
+  Weapon = { #///treads could go back a bit///
+    { #AA
+      Damage = 15, #8
+      FiringRandomness = 0.3, #1.5
+      RateOfFire = 1, #2
+    },
+    { #AG
+      Damage = 10, #10
+      FiringRandomness = 0.3, #1.5
+      ProjectileLifetime = 0.8, #1.6
+      RateOfFire = 1, #2
+      UseFiringSolutionInsteadOfAimBone = true, #nil
+    },
+  },
+}
+
+-- Cybran T2 Land Units ---------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "drl0204", #Hoplite Rocket Bot
+  Audio = {
+    Killed = Sound {
+      Bank = 'URLDestroy',
+      Cue = 'URL_Destroy_Land',
+      LodCutoff = 'UnitMove_LodCutoff',
+    },
+  },
+  Display = {
+    AnimationWalkRate = 3.7, #3.7 #3
+    UniformScale = 0.068, #0.085
+  },
+  SelectionSizeX = 0.575, #0.75
+  SelectionSizeZ = 0.7, #0.85
+  SizeX = 0.36, #0.45
+  SizeY = 0.64, #0.8
+  SizeZ = 0.72, #0.9
+  Transport = {
+    TransportClass = 2, #(CBF)
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "url0203", #Cybran Wagner Amphibious Tank
+  Display = {
+    Abilities = {
+      '<LOC ability_amphibious>Amphibious', #(CBF)
+      '<LOC ability_torpedo>Torpedoes',
+    },
+    UniformScale = 0.15, #1.25
+  },
+  Economy = {
+    BuildCostMass = 330, #297
+  },
+  SizeX = 1.08, #0.9 #///NEED TO CHANGE TRACKS///
+  SizeY = 0.54, #0.45
+  SizeZ = 1.32, #1.1
+  Weapon = {
+    { #Meson Rocket
+      #LeadTarget = false, #///Still Working on this///
+      ProjectileLifetime = 2, #nil
+      RackRecoilDistance = 0, #-0.4
+      #MuzzleVelocity = 1, #15
+      #Turreted = false, #true
+    },
+    { #Heavy Electron Bolter
+    },
+    { #Meson Torpedo
+      Damage = 10, #6
+      Turreted = false, #true
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "url0202", #Rhino Heavy Tank
+  Categories = {
+    'PRODUCTSC1',
+    'SELECTABLE',
+    'BUILTBYTIER2FACTORY',
+    'BUILTBYTIER3FACTORY',
+    'CYBRAN',
+    'MOBILE',
+    'LAND',
+    'TECH2',
+    'DIRECTFIRE',
+    #'COUNTERINTELLIGENCE',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    'TANK',
+    'OVERLAYDIRECTFIRE',
+  },
+  Display = {
+    MovementEffects = {
+      Land = {
+        Treads = {
+          TreadMarks = {
+            {
+              TreadOffset = {  0, 0, -1,  }, #{  0, 0, -0.7,  },
+            },
+          },
+        },
+      },
+    },
+  },
+  Weapon = {
+    {
+      RackRecoilDistance = 0, #1
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "url0111", #Viper Mobile Missile Launcher
+  Display = {
+    MovementEffects = {
+      Land = {
+        Treads = {
+          TreadMarks = {
+            {
+              TreadMarksSizeX = 0.85, #0.9
+            },
+          },
+        },
+      },
+    },
+  },
+  Weapon = {
+    {
+      Damage = 150, #120
+      MuzzleVelocity = 0, #3
+      RateOfFire = 0.3, #0.3
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "url0205", #Banger Mobile Anti-Air Flak Artillery
+  Defense = {
+    AirTreatLevel = 5, #3
+    Health = 750, #1000
+    MaxHealth = 750,
+  },
+  Economy = {
+    BuildCostEnergy = 1200, #800
+  },
+  Weapon = {
+    {
+      MuzzleVelocity = 30, #20
+      RateOfFire = 1, #1.6
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "url0306", #Deciever Mobile Stealth Field System #ALSO SEE SCRIPT CHANGES
+  Display = {
+    MovementEffects = {
+      Land = {
+        Treads = {
+          TreadMarks = {
+            {
+              TreadOffset = {
+                0,
+                0,
+                -1, #-1.5
+              },
+            },
+          },
+        },
+      },
+    },
+  },
+}
+
+-- Cybran T3 Land Units ---------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "xrl0302", #Fire Bettle Mobile Bomb
+  Categories = {
+    'PRODUCTFA',
+    'SELECTABLE',
+    'BUILTBYTIER3FACTORY', #'BUILTBYTIER2FACTORY',
+    'CYBRAN',
+    'MOBILE',
+    'LAND',
+    'TECH3', #'TECH2'
+    'DIRECTFIRE',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    'SHOWATTACKRETICLE',
+  },
+  StrategicIconName = 'icon_land3_bomb', #'icon_land2_bomb'
+  Weapon = {
+    {
+      Damage = 3600, #1200
+      DamageRadius = 7, #5
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "url0304", #Trebuchet Mobile Heavy Artillery
+  Display = {
+    MovementEffects = {
+      Land = {
+        Treads = {
+          TreadMarks = {
+            {
+              TreadOffset = {  0, 0, -0.6  }, #{0,0,-0.3},
+            },
+          },
+        },
+      },
+    },
+  },
+  Economy = {
+    BuildCostEnergy = 8400, #8000
+    BuildCostMass = 840, #800
+  },
+  Weapon = {
+    {
+      BallisticArc = 'RULEUBA_LowArc', #'RULEUBA_HighArc'
+      MinRadius = 8, #0
+      RackRecoilDistance = -0.25, #-1
+      WeaponUnpackAnimationRate = 0.5, #1
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "url0303", #Loyalist Siege Assault Bot
+  Audio = {
+    Destroyed = Sound {
+      Bank = 'URLDestroy',
+      Cue = 'URL_Destroy_Land',
+      LodCutoff = 'UnitMove_LodCutoff',
+    },
+  },
+  Defense = {
+    Health = 2900, MaxHealth = 2900, #3100
+  },
+  Display = {
+    AnimationWalkRate = 4.3, #4.5
+  },
+  Physics = {
+    MaxAcceleration = 3.4, #4
+    MaxBrake = 3.4, #4
+    MaxSpeed = 3.4, #4
+  },
+  Weapon = {
+    {
+      Damage = 150, #175
+      MuzzleChargeDelay = 0.1, #0.1
+      MuzzleSalvoDelay = 0.25, #0.3
+      RateOfFire = 0.25, #0.3
+    },
+    {
+      Damage = 25,
+      RateOfFire = 3, #2.5
+    },
+    {
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xrl0305", #The Brick Armored Assault Bot
+  Audio = {
+    Destroyed = Sound {
+      Bank = 'URLDestroy',
+      Cue = 'URL_Destroy_Land',
+      LodCutoff = 'UnitMove_LodCutoff',
+    },
+  },
+  Display = {
+    AnimationWalkRate = 5, #8
+  },
+  Economy = {
+    BuildCostEnergy = 14400, #14000
+    BuildCostMass = 1320, #1280
+  },
+  Physics = {
+    MaxSpeedReverse = 0, #2
+  },
+  Weapon = {
+    { #Heavy Disintegrator Pulse Laser
+      FireTargetLayerCapsTable = {
+        Air = 'Land|Water|Seabed',
+        Seabed = 'None', #'Land|Water|Seabed'
+        Land = 'Land|Water|Seabed',
+      },
+    },
+    { #Torpedoes
+      Damage = 8, #4
+    },
+    { #AntiTorpedo
+      MinRadius = 8, #15
+      MaxRadius = 30, #32
+    },
+  },
+}

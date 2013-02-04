@@ -1,0 +1,382 @@
+Rose Com Gameplay Change Notes:
+
+-- All Factions -----------------------------------------------------------------------------------------------------
+
+Commanders:
+-increased initial storage (+20% mass, +100% energy) and resource production (+300% mass, +400% energy)
+-increased manuverability (turn rates doubled, +15% speed)
+-reduced the power of the death explosion (similar to support commander)
+-added minor health gain for most upgrades (about 1000 to 2000 health from most upgrades)
+-changed costs of specific upgrades (balancing)
+-commanders now leave wreckage (leaves near experimental wreckage)
+
+Support Commanders:
+-decreased cost and health (-33%)
+-increased damage (+100%)
+-support commanders are now immune to overcharge
+-support commanders now leave wreckage
+
+Engineers:
+-increased the speed of engineers (+15%)
+-increased the manuverability of engineers
+-improved the AI of engineers slightly
+
+Capturing:
+-decreased the cost and time required to capture units (-50%)
+
+Mass Fabricators:
+-increased the effectiveness of mass fabricators while keeping them less preferable than extractors
+-view the math at-  http://forums.gaspowered.com/viewtopic.php?t=26764&highlight=bnz
+
+Factories:
+-increased the build rate of T3 factories from 60 to 80
+
+Quantum Gateways:
+-increased the build rate of gateways from 120 to 160
+
+Aircraft Carriers:
+-increased the build rate of Aircraft Carriers from 150 to 160
+
+Tactical Missile Defense:
+-increased the rate of fire of all tactical missile defenses (+150%) except aeon which recieved a range boost instead
+-increased the cost (+50%)
+
+Tactical Missile Launchers:
+-decreased missile damage (-33%)
+
+Missile Weapons:
+-increased the speed of all missile by about 50%
+
+Artillery Installations:
+-increased the minimum range
+-changed firing arc to use the high arc
+
+Mobile Missile Launchers:
+-increased the damage output of mobile missile launchers (+25%)
+
+Anti-Nuke Silo:
+-reduced the cost of anti-nuke missiles (-80%)
+-reduced the build time of anti-nuke missiles (-50%)
+
+Shield Installations:
+-increased the health of all shield generators (+300%)
+-increased the energy consumption of heavy shield generators (+400%)
+-increased the max shield health for heavy shield generators (+300%)
+-increased the regeneration rate of heavy shield generators (+200%)
+-increased the delay before heavy shield generators regenerate from 1 second to about 4 or 6
+
+Personal Shields:
+-increased the regeneration rate of personal shields
+-increased the delay time before personal shield start to regenerate
+-reduced max health on most personal shields
+
+Shield Tanks:
+-decreased the speed of shield tanks (-5%)
+
+Radar Installations:
+-increased the health of radar installations
+
+Stealth Field generators:
+-changed the size of the stealth field generators from 3x3 to 1x1
+
+Mobile Anti Air Guns:
+-increased the damage output of T1 mobile anti air guns (+25%)
+-decreased the health of mobile anti air guns (-40%)
+
+Flak Units:
+-decreased the rate of fire for the mobile flak (-50%)
+-increased the range of flak installations (+30%)
+-increased energy cost of mobile flak (+50%)
+-increased the muzzle velocity for all flak weapon from 20 to 30
+
+Air Units:
+-increased the auto land time for most air units (+300%)
+-restricted air units from using air to air attacks against landed targets
+
+Air Scouts:
+-decreased the cost of air scouts (-25%)
+
+Bombers:
+-improved the AI of all bombers so that they drop bombs more frequently (increased firing tolerance)
+
+Fighter/Bombers:
+-reduced the bomb damage of the multirole fighters (-33%)
+-increased energy cost (+50%)
+
+Gunships:
+-reduced build time (-20%)
+
+Transports:
+-increased the health of T2 Air Transports (+25%)
+-removed the light assault bot shoot from transport ability
+-removed transport loading and unloading animations to reduce unloading times
+
+Air Superiority Fighters:
+-decreased the damage of air superiority fighters (-25%)
+-increased cost (+20%)
+
+Torpedo Bombers:
+-reduced build time (-33%)
+
+Subsurface Units:
+-decreased the speed of submersible units while submerged, the surfaced speed remains the same
+
+Battleships:
+-increased speed (+15%)
+
+Torpedo Launcher Defenses:
+-decreased cost (-10%)
+-reduced range (-20%)
+
+Experimentals:
+-increased the build cost and build time of most experimentals
+-increased the veterancy requirements for experimentals
+-reduced the speed of experimentals
+-increased the toughness of most experimentals
+-changed selection priority of experimentals to be below that of regular land units but above engineers
+-removed the drag build option for experimentals
+
+Score Tab:
+-removed the player scores from the score tab, now only shows survival status
+
+-- UEF --------------------------------------------------------------------------------------------------------------
+
+Snoop Land Scout:
+-increased the rate of fire (+300%)
+
+Titan Heavy Assault Bot:
+-decreased speed from 4 to 2.5
+
+Spearhead Mobile Missile Platform:
+-decreased range
+-increased cost
+
+Broadsword Heavy Gunship:
+-increased anti-air weapon damage from 4 to 10
+
+Thunderhead Class Frigate:
+-increased anti-air weapon damage output
+
+Valiant Class Destroyer:
+-increased the anti-air damage output
+-increased the torpedo fire rate
+-changed icon
+
+Cooper Class Torpedo Boat:
+-decreased anti-torpedo rate of fire
+-increased speed
+
+Governor Class Cruiser:
+-fixed bug preventing the anti-air sam launcher from firing during a missile salvo
+-decreased the rate of fire of the anti-air sam launcher
+
+Summit Class Battleship:
+-increased anti-air damage output (+200%)
+-increased cannon range
+
+Ravager Point Defense:
+-fixed threat level bug
+
+Kennel Engineering Station:
+-made drones untargetable
+-prevented drones from operating outside of the kennel station control range
+-reduced kennel drone sight range to 0 to prevent exploitation
+
+Stoneager Strategic Missile Silo:
+-fixed a bug that caused missiles to detonate on mobile units
+
+C-D1 and CD-2 'Rover' Engineering Drones:
+-decreased movement speed (-25%)
+
+-- Cybran -----------------------------------------------------------------------------------------------------------
+
+Deciever Mobile Stealth Field Generator:
+-fixed stacking effect bug
+
+Fire Beetle Mobile Bomb:
+-moved to T3
+-increased damage (+200%)
+-increased splash radius from 5 to 7
+
+Hoplite Rocket Bot:
+-fixed transport size
+
+Wagner Amphibious Tank:
+-increased torpedo damage (+66%)
+-increased cost (+10%)
+
+The Brick Armored Assault Bot:
+-increased torpedo damage
+-increased cost
+-improved layer change AI
+
+Loyalist Siege Assault Bot:
+-reduced speed from 4 to 3.4
+-reduced health slightly
+
+Corsair Fighter Bomber:
+-increased anti-air capabilities
+
+Galaxy Class Battleship:
+-improved anti-air capabilities (+200%)
+-increased torpedo damage (+100%)
+
+Salem Class Destroyer:
+-increased anti-air abilities (+66%)
+
+Siren Class Cruiser:
+-reduced anti-air abilities
+-improved direct fire abilities and AI
+
+Trident Class Frigate:
+-increased anti-air abilities
+
+Soothsayer Perimeter Monitering System:
+-increased build time to match cost
+
+Naval Factories:
+-fixed bug that made them difficult to hit with torpedoes
+
+Barracuda Submarine Killer:
+-increased cost and build time
+-reduced movement speed
+-increased personal stealth field energy cost
+-changed damage fire rates and volley size
+
+CI:18 Mermaid Counter-Intelligence Boat:
+-reduced speed from 7 to 5.5
+
+-- Aeon -------------------------------------------------------------------------------------------------------------
+
+Spirit Land Scout:
+-increased damage (+300%)
+
+Harbinger Heavy Assault Bot:
+-decreased cost
+-decreased toughness
+-decreased rate of fire
+
+Mercy Guided Missile:
+-increased fuel time
+-increased health
+
+Restorer Anti-Air Gunship:
+-increased energy cost and build time
+-decreased health
+
+Shard Attack Boat:
+-decreased build time
+
+Exodus Class Destroyer:
+-increased cost and build time (+20%)
+
+Infinity Class Cruiser:
+-decreased anti-air abilities
+
+Naval Factories:
+-fixed bug that made them difficult to hit with torpedoes
+
+Salvation Rapid Fire Artillery:
+-fixed adjacency bonus bug
+-reduced cost and build time
+-reduced range
+-reduced damage output
+
+Vesper Submarine Hunter:
+-increased cost and build rate
+-increased movement speed
+-reduced damage output
+
+-- Seraphim ---------------------------------------------------------------------------------------------------------
+
+Zthuee Mobile Light Artillery:
+-increased the build time of the zthuee mobile light artillery from 180 to 240
+-decreased the mass cost from 54 to 48
+
+Ia-istle Mobile Anti-Air Gun:
+-fixed walk animation to prevent it from firing into the ground while moving
+
+Yenzyne Hover Tank:
+-increased the rate of fire
+
+Ilshavoh Assault Bot:
+-changed icon to represent a bot
+-increased manuverability
+
+Othuum Siege Tank:
+-decreased range from 25 to 22
+-increased the torpedo damage (+100%)
+-fixed bug related to following terrain contour
+-changed tread marks slightly
+
+Athanah Mobile Shield Generator:
+-increased maximum shield strength
+
+Suthanus Mobile Heavy Artillery:
+-changed icon
+
+Notha Fighter Bomber:
+-improved AI by fixing a bug in the script which caused it to preform poorly against arial targets
+
+Vishala Air Transport:
+-increased damage of the weapon systems
+
+Hau-esel Frigate:
+-reduced movement speed (-10%)
+-increased the damage of the AA turret (+300%)
+
+Uashavoh Destroyer:
+-incresed torpedo damage (+25%)
+-changed icon to represent its sub status
+
+Ithalua Cruiser:
+-decreased the damage output of the flak cannons (-25%)
+-increased the damage output of the anti-air autogun (+20%)
+
+Hauthuum Battleship:
+-increased anti air capabilities (+300%)
+-fixed nuclear missile arc
+-added nuclear missile launch sound
+
+Yathsou Submarine Hunter:
+-reduced anti-air auto gun rate of fire (-25%)
+
+Seraphim Naval Factories:
+-corrected roll off point
+
+Seraphim Support Commander:
+-reduced the resource production to better match the other support commanders
+
+-- Other ------------------------------------------------------------------------------------------------------------
+
+Improved all sorts of other little things including the graphics effects and sound effects of units, their target
+ priorities, responsiveness to commands, unit threat ratings, and the AI of some units.
+
+Modified the cost and build times of most units to have more even build cost rates in accordance to the increase in
+ the T3 factory build rates. All cost changes have a relatively negligable effect on cost value of units.
+
+This mod includes all of the useful bug fixes from the Community Bug Fix Patch V3 mod and even fixes the bugs with
+ the bug fix patch. If you have the community bug fix patch, use this instead and not both.
+
+If you have a desire to know the full width of the changes in this mod, learn to read the code.
+
+-- For the Future ---------------------------------------------------------------------------------------------------
+
+  I plan to add some new icons to represent armored assault bots, sniper bots, the shield disruptor, and some other
+units. If anybody has any good ideas, i am open to suggestions. If i can, i will also change the description on some
+units to better match their actual role.
+
+  If you have complaints or suggestions you know where to reach me, and if you dont, ask somebody who does, if you
+dont know one of them make friends until you find one who does.
+
+-- Credits ----------------------------------------------------------------------------------------------------------
+
+Lead Modder:
+Ian Stafford
+
+Additional Coding / Special Thanks:
+Ian Roberts
+(Your name can go here too!)
+
+Additionally, all of the guys who worked on the community bug fix patch, those helpful internet sites that taught me
+how to mod, my two brothers, my friends, and everyone who plays this mod and provided any useful feed back.

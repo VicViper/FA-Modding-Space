@@ -1,0 +1,326 @@
+-- Aeon T1 Air Units ------------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "uaa0101", #Mirage Air Scout
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildCostEnergy = 1200, #1600
+    BuildCostMass = 30, #40
+    BuildTime = 300, #400
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uaa0102", #Conservator Interceptor
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Weapon = {
+    {
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+    {
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uaa0103", #Shimmer Attack Bomber
+  Air = {
+    AutoLandTime = 4, #1
+    PredictAheadForBombDrop = 3, #(CBF)
+    MaxAirspeed = 11, #10
+  },
+  Weapon = {
+    {
+      FiringTolerance = 6, #(CBF)
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uaa0107", #Chariot Light Air Transport
+  Air = {
+    KTurn = 1.8, #1
+    KTurnDamping = 2.7, #4
+  },
+  Defense = {
+    AirThreatLevel = 2, #4
+    Health = 750, #500
+    MaxHealth = 750,
+  },
+  Economy = {
+    BuildCostMass = 160, #120
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 3, #2
+  },
+}
+
+-- Aeon T2 Air Units ------------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "uaa0104", #Aluminar Air Transport
+  Air = {
+    KTurn = 1.8, #1
+    KTurnDamping = 2.7, #4
+    MaxAirspeed = 11, #15
+  },
+  Defense = {
+    AirThreatLevel = 3, #1.5
+    Health = 2375, #1575
+    MaxHealth = 2375,
+  },
+  Economy = {
+    BuildCostMass = 480, #300
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Attack = false, #true
+      RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 3, #2
+  },
+  Weapon = {
+    { #Sonic Pulse Battery
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+      MaxRadius = 30, #20
+    },
+    { #Sonic Pulse Battery
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+      MaxRadius = 30, #20
+    },
+    { #Sonic Pulse Battery
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+      MaxRadius = 30, #20
+    },
+    { #Sonic Pulse Battery
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+      MaxRadius = 30, #20
+    },
+    { #Crash
+      AboveWaterTargetsOnly = true,
+      Damage = 250,
+      DamageFriendly = true,
+      DamageRadius = 1,
+      DamageType = 'Normal',
+      DisplayName = 'Air Crash',
+      DummyWeapon = true,
+      FiringTolerance = 2,
+      Label = 'DeathImpact',
+      WeaponCategory = 'Death',
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xaa0202", #Swift Wind Combat Fighter
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildCostEnergy = 9000, #6000
+  },
+  Weapon = {
+    {
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uaa0204", #Skimmer Torpedo Bomber
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildTime = 1200, #1600
+  },
+  Weapon = {
+    {
+      FiringTolerance = 6, #(CBF)
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uaa0203", #Specter Gunship
+  Air = {
+    AutoLandTime = 6, #1
+    MaxAirspeed = 10, #12
+  },
+  Defense = {
+    Health = 1180, #1040
+    MaxHealth = 1180,
+  },
+  Economy = {
+    BuildCostEnergy = 7200, #6000
+    BuildCostMass = 360, #300
+    BuildTime = 1800, #2000
+  },
+  SelectionThickness = 0.42, #0.37
+  Weapon = {
+    {
+      AlwaysRecheckTarget = true, #nil
+      Damage = 14, #13
+      TargetCheckInterval = 0.3, #0.4
+      TargetPriorities = {
+        'SPECIALHIGHPRI',
+        'MOBILE ANTIAIR', #Ianz
+        'SPECIALLOWPRI',
+        'ALLUNITS',
+      },
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "daa0206", #Mercy Guided Missile
+  Air = {
+    AutoLandTime = 2, #1
+    MaxAirspeed = 13, #10
+    MinAirspeed = 10, #10
+  },
+  Defense = {
+    Health = 100, #10
+    MaxHealth = 100, #10
+  },
+  Economy = {
+    BuildCostEnergy = 5400, #6000
+    BuildCostMass = 240, #300
+    BuildTime = 1200, #2000
+  },
+  Physics = {
+    Elevation = 15, #18
+    FuelUseTime = 120, #70
+  },
+  Weapon = {
+    {
+      MaxRadius = 20, #25
+      FiringTolerance = 6, #(CBF)
+    },
+  },
+}
+
+-- Aeon T3 Air Units ------------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "uaa0302", #Seer Spy Plane
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildCostEnergy = 5250, #5000
+    BuildCostMass = 180, #195
+    BuildTime = 1200, #900
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xaa0306", #Solace Torpedo Bomber
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildCostEnergy = 28800, #27500
+    BuildCostMass = 1440, #1650
+    BuildTime = 6400, #6600
+  },
+  Weapon = {
+    {
+      FiringTolerance = 6, #(CBF)
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uaa0304", #Shocker Strategic Bomber
+  Air = {
+    AutoLandTime = 4, #1
+    PredictAheadForBombDrop = 3, #(CBF)
+  },
+  Economy = {
+    BuildCostEnergy = 67200, #70000
+  },
+  Weapon = {
+    {
+      FiringTolerance = 6, #(CBF)
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uaa0303", #Corona Air Superiority Fighter
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildCostEnergy = 21600, #20000
+    BuildCostMass = 480, #400
+    BuildTime = 3200, #3000
+  },
+  Weapon = {
+    { #Displacement Cannon
+      Damage = 105, #135
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+    { #Crash
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xaa0305", #Restorer Anti-Air Gunship
+  Air = {
+    AutoLandTime = 6, #1
+  },
+  Defense = {
+    Health = 5400, MaxHealth = 5400, #7200
+  },
+  Economy = {
+    BuildCostEnergy = 42500, #20000
+    BuildCostMass = 1190, #1200
+    BuildTime = 6800, #4800
+  },
+  Weapon = {
+    { #Quad Laser
+      TargetPriorities = {
+        'SPECIALHIGHPRI',
+        'MOBILE ANTIAIR', #Ianz
+        'SPECIALLOWPRI',
+        'ALLUNITS',
+      },
+    },
+    { #AA Missile
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+    { #AA Missile
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+    { #Crash
+      Damage = 300, #100
+    },
+  },
+}

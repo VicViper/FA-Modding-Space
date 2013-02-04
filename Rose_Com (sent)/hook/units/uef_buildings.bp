@@ -1,0 +1,362 @@
+-- UEF Economic Structures ------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "ueb1202", #T2 Mass Extractor
+  Economy = {
+    BuildRate = 20, #15
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "ueb1302", #T3 Mass Extractor
+  Economy = {
+    BuildCostEnergy = 36000, #31625
+    BuildCostMass = 5600, #4600
+    BuildTime = 4000, #2875
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "ueb1104", #T2 Mass Fabricator
+  Economy = {
+    BuildCostEnergy = 4000, #4000
+    BuildCostMass = 400, #100 #370
+    BuildTime = 1000, #500
+    MaintenanceConsumptionPerSecondEnergy = 140, #150
+    ProductionPerSecondMass = 2, #1
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "ueb1303", #T3 Mass Fabricator
+  Economy = {
+    ProductionPerSecondMass = 16, #12
+  },
+}
+
+-- UFE Defensive Structures -----------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "ueb2109", #DN1 T1 Torpedo Launcher
+  Economy = {
+    BuildCostEnergy = 3200, #3600
+    BuildCostMass = 400, #450
+    BuildTime = 400, #450
+  },
+  Weapon = {
+    {
+      MaxRadius = 40, #50
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "ueb4201", #Buzzkill TMD
+  Economy = {
+    BuildCostEnergy = 4200, #3200
+    BuildCostMass = 420, #320
+    BuildCostTime = 600, #400
+  },
+  Weapon = {
+    {
+      RateOfFire = 1.25, #0.5
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "ueb2108", #Aloha TML
+  Weapon = {
+    {
+      Damage = 4000, #6000
+      DamageRadius = 3, #2
+      MuzzleVelocity = 5, #10
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "ueb2301", #Triad Heavy Point Defense
+  Weapon = {
+    {
+      RackRecoilDistance = -1, #-2
+    },
+  },
+}
+
+UnitBlueprint { Merge = true,  BlueprintId="xeb2306", #Ravager T3 Point Defense
+  Defense = { 
+    AirThreatLevel = 0, #54
+    SurfaceThreatLevel = 54, #0
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId="ueb2303", #Klink Hammer Artillery Installation
+  Weapon = {
+    {
+      BallisticArc = 'RULEUBA_HighArc', #'RULEUBA_LowArc'
+      MinRadius = 25, #5
+      MuzzleVelocityReduceDistance = 120, #nil
+      RackRecoilDistance = -1, #-2.5
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "ueb2204", #Air Cleaner Anti-Air Flak Artillery
+  Defense = {
+    Health = 2400, #3700
+    MaxHealth = 2400, 
+  },
+  Display = {
+    UniformScale = 0.2, #0.15
+  },
+  Economy = {
+    BuildCostEnergy = 4480, #5600
+    BuildCostMass = 448, #560
+    BuildTime = 560, #700
+  },
+  SelectionCenterOffsetZ = -0.2, #-0.4
+  SizeX = 0.65, #0.5
+  SizeY = 1.6, #1.2
+  SizeZ = 0.65, #0.5
+  Weapon = {
+    {
+      MaxRadius = 52, #44
+      MuzzleVelocity = 30, #20
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "ueb2304", #Flayer Anti-Air SAM Launcher
+  Defense = {
+    Health = 5000, #10500
+    MaxHealth = 5000,
+  },
+  Economy = {
+    BuildCostEnergy = 14000, #12000
+  },
+  Weapon = {
+    {
+      MaxRadius = 75, #60
+    },
+  },
+}
+
+-- UEF Shield Generators --------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "ueb4202", #SD - Pulse Shield Generator
+  Defense = {
+    Health = 1000, MaxHealth = 1000, #250
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "ueb4301", #HSD Pulse Heavy Shield Generator
+  Defense = {
+    Health = 2000, MaxHealth = 2000, #500
+    Shield = {
+      ShieldMaxHealth = 35000, #15000 #45000
+      ShieldRechargeTime = 25, #23
+      ShieldRegenRate = 350, #131
+      ShieldRegenStartTime = 7, #1
+      ShieldVerticalOffset = -3, #-6	
+    },
+  },
+  Economy = {
+    MaintenanceConsumptionPerSecondEnergy = 2000, #400
+  },
+}
+
+-- UEF Strategic Missile Silo ---------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "ueb2305", #Stoneager SML
+  Weapon = {
+    {
+      DoNotCollideList = {
+        'MOBILE', #(CBF)
+      },
+    },
+  },
+}
+
+-- UEF Intelligence Structures --------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "ues0305", #SP3-3000 Sonar System
+  StrategicIconName = 'icon_ship3_intel', #'icon_structure3_intel'
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "ueb3101", #SA1-1000 T1 Radar System
+  Defense = {
+    Health = 50, MaxHealth = 50, #10
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "ueb3201", #SA2-2000 XR T2 Radar System
+  Defense = {
+    Health = 150, MaxHealth = 150, #50
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "ueb3104", #SA3-Omni Omni Sensor Array
+  Defense = {
+    Health = 250, MaxHealth = 250, #100
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "ueb4203", #Scattershield Stealth Field Generator #ALSO SEE SCRIPT CHANGES
+  Categories = {
+    'PRODUCTSC1', 'SELECTABLE', 'BUILTBYTIER2ENGINEER', 'BUILTBYTIER3ENGINEER',
+    'BUILTBYTIER2COMMANDER', 'BUILTBYTIER3COMMANDER', 'UEF', 'STRUCTURE',
+    'INTELLIGENCE', 'TECH2', 'COUNTERINTELLIGENCE', 'SIZE4', 'VISIBLETORECON',
+    'RECLAIMABLE', 'OVERLAYCOUNTERINTEL', 'SORTINTEL',
+  },
+  Display = {
+    Tarmacs = {
+      {
+        Albedo = 'Tarmacs/Tar6x_01_albedo',
+        Normal = 'Tarmacs/Tar6x_01_normals',
+        Length = 6.4,
+        Width = 6.4,
+      },
+    },
+    UniformScale = 0.15, #0.3
+  },
+  Footprint = {
+    SizeX = 1, #3
+    SizeZ = 1, #3
+  },
+  LifeBarOffset = 0.6, #1.2
+  LifeBarSize = 1.25, #2.5
+  Physics = {
+    MeshExtentsX = 1.6, #3.2
+    MeshExtentsY = 2.5, #5
+    MeshExtentsZ = 1.6, #3.2
+    SkirtOffsetX = -0.5, #-1.5
+    SkirtOffsetZ = -0.5, #-1.5
+    SkirtSizeX = 2, #6
+    SkirtSizeZ = 2, #6
+  },
+  SelectionSizeX = 0.75, #1.55
+  SelectionSizeZ = 0.75, #1.55
+  SizeX = 0.45, #0.9
+  SizeY = 2, #4
+  SizeZ = 0.45, #0.9
+}
+
+-- UEF Production Structures ----------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "ueb0103", #T1 Naval Factory
+  Footprint = {
+    MinWaterDepth = 2, #1.5
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "ueb0303", #T3 Naval Factory
+  Economy = {
+    BuildRate = 80, #60
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "ueb0302", #T3 Air Factory
+  Economy = {
+    BuildRate = 80, #60
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "ueb0301", #T3 Land Factory
+  Economy = {
+    BuildRate = 80, #60
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "ueb0304", #QGW R-32 Quantum Gateway
+  Economy = {
+    BuildRate = 160, #120
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = 'xeb0104', #Kennel Station
+  AI = {
+    GuardScanRadius = 25, #15
+    StagingPlatformScanRadius = 25, #15
+  },
+  Categories = {
+    'PRODUCTFA',
+    'SELECTABLE',
+    'BUILTBYTIER3ENGINEER',
+    'BUILTBYTIER3COMMANDER',
+    'BUILTBYTIER2ENGINEER',
+    'BUILTBYTIER2COMMANDER',
+    'UEF',
+    'STRUCTURE',
+    'CONSTRUCTION',
+    'TECH2',
+    'DRAGBUILD',
+    'VISIBLETORECON',
+    'PODSTAGINGPLATFORM',
+    'RECLAIMABLE',
+    'SHOWQUEUE',
+    'ENGINEERSTATION',
+    'OVERLAYMISC',
+    'SORTSTRATEGIC', #'SORTCONSTRUCTION'
+  },
+  Intel = {
+    VisionRadius = 25, #15
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = 'xeb0204', #Upgraded Kennel Station
+  Intel = {
+    VisionRadius = 25, #15
+  },
+}
+
+-- Other ------------------------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "xea3204", #Kennel Drone
+  Audio = {
+    ReclaimLoop = Sound {
+      Bank = 'UEL',
+      Cue = 'UEL0208_Reclaim_Loop',
+      LodCutoff = 'UnitMove_LodCutoff',
+    },
+    StartReclaim = Sound {
+      Bank = 'UEL',
+      Cue = 'UEL0208_Reclaim_Start',
+      LodCutoff = 'UnitMove_LodCutoff',
+    },
+  },
+  Categories = {
+    'SELECTABLE',
+    'UEF',
+    'MOBILE',
+    'AIR',
+    'UNTARGETABLE', #Added
+    'TECH1',
+    'POD',
+    'REPAIR',
+    'RECLAIM',
+    'ENGINEER',
+    'CAPTURE',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    'SHOWQUEUE',
+    'STATIONASSISTPOD',
+  },
+  Display = {
+    UniformScale = 0.022, 0.011
+  },
+  Economy = {
+    BuildCostEnergy = 40, #500
+    BuildCostMass = 4, #50
+    BuildRate = 20, #25
+    BuildTime = 40, #150
+  },
+  Intel = {
+    VisionRadius = 0, #12
+  },
+  Physics = {
+    Elevation = 1.2, #0.4
+    BuildOnLayerCaps = {
+      LAYER_Air = false,
+      LAYER_Land = true,
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uea0001", #C-D1 'Rover' Engineering Drone
+  Air = {
+    MaxAirspeed = 3, #4
+    MinAirspeed = 2, #3
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uea0003", #C-D2 'Rover' Engineering Drone
+  Air = {
+    MaxAirspeed = 3, #4
+    MinAirspeed = 2, #3
+  },
+}

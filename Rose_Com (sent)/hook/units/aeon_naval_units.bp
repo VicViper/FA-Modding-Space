@@ -1,0 +1,206 @@
+-- Aeon Tier 1 Naval Units ----------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "uas0102", #Shard Attack Boat
+  Economy = {
+    BuildTime = 600, #800
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uas0103", #Beacon Class Frigate
+  Defense = {
+    AirThreatLevel = 0, #1
+  },
+  Physics = {
+    MaxAcceleration = 5.5, #6
+    MaxBrake = 5.5, #6
+    MaxSpeed = 5.5, #6
+    MaxSpeedReverse = 5.5, #6
+  },
+  Weapon = {
+    { #Quantum Cannon
+      Audio = {
+        Fire = Sound {
+          Bank = 'UASWeapon',
+          Cue = 'None',
+          LodCutoff = 'Weapon_LodCutoff',
+        },
+        MuzzleChargeStart = Sound {
+          Bank = 'UASWeapon',
+          Cue = 'UAS0103_Cannon_Quantum',
+          LodCutoff = 'Weapon_LodCutoff',
+        },
+      },
+      MaxRadius = 34, #31
+    },
+    { #Quantum Cannon
+      Audio = {
+        Fire = Sound {
+          Bank = 'UASWeapon',
+          Cue = 'None',
+          LodCutoff = 'Weapon_LodCutoff',
+        },
+        MuzzleChargeStart = Sound {
+          Bank = 'UASWeapon',
+          Cue = 'UAS0103_Cannon_Quantum',
+          LodCutoff = 'Weapon_LodCutoff',
+        },
+      },
+      MaxRadius = 34, #31
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uas0203",  #Sylph Attack Submarine
+  Physics = {
+    MaxAcceleration = 4, #6
+    MaxBrake = 4, #6
+    MaxSpeed = 4, #6
+    MaxSpeedReverse = 4, #6
+  },
+  Weapon = {
+    {
+      EffectiveRadius = 29, #nil
+      MuzzleSalvoDelay = 0.4, #0.8
+    },
+  },
+}
+
+-- Aeon Tier 2 Naval Units ---------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "uas0201", #Exodus Class Destroyer
+  Defense = {
+    AirTreatLevel = 0, #8
+  },
+  Economy = {
+    BuildCostEnergy = 18000, #15000
+    BuildCostMass = 2700, #2250
+    BuildTime = 12000, #10000
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uas0202", #Infinity Class Cruiser
+  Weapon = {
+    { #Quantum Cannon
+      MuzzleChargeDelay = 0.5, #0.4
+      RackRecoilDistance = -0.25, #-0.5
+      SlavedToBodyArcRange = 120, #135
+      TurretYawRange = 125, #140
+    },
+    { #AA Missile
+      RateOfFire = 0.6, #1
+      FiringTolerance = 360, #1
+      TurretPitchRange = 10, #40
+      TurretYawRange = 65, #20
+      Turreted = true, #false
+    },
+    { #AA Missile
+      RateOfFire = 0.6, #1
+      FiringTolerance = 360, #1
+      TurretPitchRange = 10, #40
+      TurretYawRange = 65, #20
+      Turreted = true, #false
+    },
+    { #Will O Wisp TMD
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xas0204", #Vesper Submarine Hunter
+  Economy = {
+    BuildCostEnergy = 13200, #8800
+    BuildCostMass = 1650, # 1100
+    BuildTime = 6600, #4400
+  },
+  Physics = {
+    MaxAcceleration = 7, #6.5
+    MaxBrake = 7, #6.5
+    MaxSpeed = 7, #6.5
+    MaxSpeedReverse = 7, #6.5
+  },
+  Weapon = {
+    { #Torpedoes
+      Damage = 75, #90
+      MuzzleSalvoDelay = 0.5, #0.4
+      RateOfFire = 0.3, #0.25
+    },
+    { #AntiTorpedoes
+      MaxRadius = 30, #32
+      MinRadius = 8, #nil
+      RateOfFire = 0.15, #0.13
+    },
+  },
+}
+
+-- Aeon Tier 3 Naval Units ----------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "uas0303", #Keefer Class Aircraft Carrier
+  Economy = {
+    BuildRate = 160, #150
+  },
+  Weapon = {
+    {
+      Damage = 300, #120
+      RateOfFire = 0.6, #1
+    },
+    {
+      Damage = 300, #120
+      RateOfFire = 0.6, #1
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uas0302", #Omen Class Battleship
+  AI = {
+    AttackAngle = 90, #60
+  },
+  Defense = {
+    AirThreatLevel = 0, #16
+  },
+  Economy = {
+    BuildCostEnergy = 90000, #75000
+  },
+  Physics = {
+    MaxAcceleration = 4.1, #3.6
+    MaxBrake = 4.1, #3.6
+    MaxSpeed = 4.1, #3.6
+    MaxSpeedReverse = 4.1, #3.6
+  },
+  Weapon = {
+    { #Oblivion Cannon
+      MaxRadius = 96, #100
+    },
+    { #Oblivion Cannon
+      MaxRadius = 96, #100
+    },
+    { #Oblivion Cannon
+      MaxRadius = 96, #100
+    },
+    { #Will O Wisp TMD
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xas0306", #Torrent Class Missile Ship
+  Weapon = {
+    { #Missile Rack
+      ProjectileId = '/projectiles/AIFMissileSerpentine02/AIFMissileSerpentine02_proj.bp',
+    },
+    { #Missile Rack
+      ProjectileId = '/projectiles/AIFMissileSerpentine02/AIFMissileSerpentine02_proj.bp',
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uas0304", #Silencer Strategic Missile Submarine
+  Economy = {
+    BuildCostMass = 9000, #10000
+  },
+  Weapon = {
+    { #Long Range Cruise Missile
+      MaxRadius = 192, #128
+    },
+    { #Nuclear Warhead
+      RangeCategory = '', #'UWRC_IndirectFire'
+    },
+  },
+}

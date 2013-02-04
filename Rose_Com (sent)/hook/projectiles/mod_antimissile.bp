@@ -1,0 +1,8 @@
+ProjectileBlueprint {
+  Merge = true,
+  Source = '/projectiles/AIMAntiMissile01/AIMAntiMissile01_proj.bp', #Aeon TMD Flare
+    Physics = {
+      Acceleration = 3, #1
+      MaxSpeed = 10, #5 #15
+    },
+}

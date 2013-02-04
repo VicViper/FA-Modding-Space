@@ -1,0 +1,277 @@
+-- Fatboy -----------------------------------------------------------------------------------------------------------
+#I really like what they did with the fatboy in forged alliance: they made it move faster, bulid faster, cost less,
+# and they reduced the power of its guns so it became more of a mobile factory than a land battle ship. The only
+# change i did not like was that its health was so low. Even with shields it seemed too weak.
+UnitBlueprint { Merge = true, BlueprintId = "uel0401", #Fatboy Mobile Factory
+  AI = {
+    AttackAngle = 20, #10
+  },
+  Categories = {
+    'PRODUCTSC1',
+    'SELECTABLE',
+    'BUILTBYTIER3COMMANDER',
+    'BUILTBYTIER3ENGINEER',
+    'UEF',
+    'MOBILE',
+    'LAND',
+    'EXPERIMENTAL',
+    'INDIRECTFIRE',
+    'ARTILLERY',
+    'CONSTRUCTION',
+    'AIRSTAGINGPLATFORM',
+    'FACTORY',
+    'NEEDMOBILEBUILD',
+    'ANTIAIR',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    #'DRAGBUILD',
+    'SHOWQUEUE',
+    'OVERLAYMISC',
+    'OVERLAYANTIAIR',
+    'OVERLAYDEFENSE',
+    'OVERLAYANTINAVY',
+    'OVERLAYDIRECTFIRE',
+    'OVERLAYMISC',
+    'SORTDEFENSE', #Ianz
+  },
+  Defense = {
+    Health = 25000, #12500
+    MaxHealth = 25000,
+    Shield = {
+      ShieldRegenRate = 100, #64
+      ShieldRegenStartTime = 4, #1
+      ShieldVerticalOffset = -3, #-7
+    },
+  },
+  Economy = {
+    BuildCostEnergy = 461250, #307500 (x1.5)
+    BuildCostMass = 35900, #24600 (x1.5)
+    BuildTime = 55350, #18450 (x2)
+    BuildRate = 200, #180
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Guard = false,
+      RULEUCC_Patrol = false,
+    },
+    SelectionPriority = 2, #nil
+  },
+  Physics = {
+    BackUpDistance = 25, #15
+    MaxAcceleration = 1.25, #1.75
+    MaxBrake = 1.25, #1.75
+    MaxSpeed = 1.25, #1.75
+    MaxSpeedReverse = 1.25, #1.75
+    TurnRate = 15, #30
+  },
+  Vetaran = {
+    Level1 = 40, #25
+    Level2 = 80,
+    Level3 = 120,
+    Level4 = 160,
+    Level5 = 200,
+  },
+  Weapon = {
+    { #Right Turret 1
+      Damage = 500, #250
+      FiringRandomness = 0.6, #1.1
+      MuzzleVelocity = 30, #25
+      RateOfFire = 0.25, #1
+    },
+    { #Right Turret 2
+      Damage = 500, #250
+      FiringRandomness = 0.6, #1.1
+      MuzzleVelocity = 30, #25
+      PrefersPrimaryWeaponTarget = false, #true
+      RateOfFire = 0.25, #1
+    },
+    { #Left Turret 1
+      Damage = 500, #250
+      FiringRandomness = 0.6, #1.1
+      PrefersPrimaryWeaponTarget = false, #true
+      MuzzleVelocity = 30, #25
+      RateOfFire = 0.25, #1
+    },
+    { #Left Turret 2
+      Damage = 500, #250
+      FiringRandomness = 0.6, #1.1
+      PrefersPrimaryWeaponTarget = false, #true
+      MuzzleVelocity = 30, #25
+      RateOfFire = 0.25, #1
+    },
+    { #Right Riot Gun
+      Damage = 75, #150
+    },
+    { #Left Riot Gun
+      Damage = 75, #150
+    },
+    { #Right Railgun
+      Damage = 80, #40
+    },
+    { #Left Railgun
+      Damage = 80, #40
+    },
+    { #Torpedoes
+    },
+    { #Death Explosion
+    },
+  },
+  Wreckage = {
+    ReclaimTimeMultiplier = 4, #1
+  },
+}
+
+-- Atlantis ---------------------------------------------------------------------------------------------------------
+# On one hand i dont want keep the UEF from having an aircraft carrier, but on the other hand i must be fair and
+#  increase its cost and veterancy requirements. The Atlantis was changed the least from its original
+UnitBlueprint { Merge = true, BlueprintId = "ues0401", #Atlantis Experimental Aircraft Carrier
+  Categories = {
+    'PRODUCTSC1',
+    'SELECTABLE',
+    'BUILTBYTIER3COMMANDER',
+    'BUILTBYTIER3ENGINEER',
+    'UEF',
+    'MOBILE',
+    'NAVAL',
+    'EXPERIMENTAL',
+    'SUBMERSIBLE',
+    'AIRSTAGINGPLATFORM',
+    'INTELLIGENCE',
+    'RADAR',
+    'REPAIR',
+    'CARRIER',
+    'NEEDMOBILEBUILD',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    #'DRAGBUILD',
+    'FACTORY',
+    'NAVALCARRIER',
+    'SHOWQUEUE',
+    'OVERLAYANTIAIR',
+    'OVERLAYRADAR',
+    'OVERLAYSONAR',
+    'OVERLAYANTINAVY',
+    'OVERLAYMISC',
+    'SORTDEFENSE', #Ianz
+  },
+  Defense = {
+    Health = 60000, #40000
+    MaxHealth = 60000,
+  },
+  Economy = {
+    BuildCostEnergy = 225000, #150000 (x1.5)
+    BuildCostMass = 18000, #12000 (x1.5)
+    BuildTime = 27000, #9000 (x3)
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Guard = false,
+      RULEUCC_Patrol = false,
+    },
+    SelectionPriority = 2, #nil
+  },
+  Veteran = {
+    Level1 = 40, #30
+    Level2 = 80,
+    Level3 = 120,
+    Level4 = 160,
+    Level5 = 200,
+  },
+}
+
+-- Novax Satallite System -------------------------------------------------------------------------------------------
+UnitBlueprint { Merge = true, BlueprintId = "xeb2402", #Novax Experimental Satellite System
+  Categories = {
+    'PRODUCTFA',
+    'UEF',
+    'STRUCTURE',
+    'BUILTBYTIER3COMMANDER',
+    'BUILTBYTIER3ENGINEER',
+    'EXPERIMENTAL',
+    'ORBITALSYSTEM',
+    'SELECTABLE',
+    'LAND',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    #'DRAGBUILD',
+    'SORTSTRATEGIC', #Ianz
+  },
+  Economy = {
+    BuildCostEnergy = 225000, #150000 (x1.5)
+    BuildCostMass = 18000, #12000 (x1.5)
+    BuildTime = 27000, #9000 (x3)
+  },
+  Wreckage = {
+    ReclaimTimeMultiplier = 4, #1
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xea0002", #Novax Experimental Defense Satellite
+  Air = {
+    HoverOverAttack = true,
+    KLiftDamping = 5, #10
+    MaxAirspeed = 2, #6
+  },
+  General = {
+    CapCost = 0, #1
+    CommandCaps = {
+      RULEUCC_Guard = false,
+      RULEUCC_Patrol = false,
+    },
+    SelectionPriority = 2, #nil
+  },
+  Physics = {
+    Elevation = 125, #75
+  },
+  Weapon = {
+    { #Orbital Death Laser
+      Damage = 225, #75
+      MaxRadius = 10, #30
+      RateOfFire = 0.025, #0.05
+    },
+    { #Crash
+    },
+  },
+  Wreckage = {
+    ReclaimTimeMultiplier = 4, #1
+  },
+}
+
+-- Mavor ------------------------------------------------------------------------------------------------------------
+# This is still going to be the super experimental that ends the game after two hours no matter what so it wont
+# really change, but I liked the CBP mod to the artillery that made it more accurate
+UnitBlueprint { Merge = true, BlueprintId = "ueb2401", #Mavor Experimental Artillery
+  Categories = {
+    'PRODUCTSC1',
+    'SELECTABLE',
+    'BUILTBYTIER3COMMANDER',
+    'BUILTBYTIER3ENGINEER',
+    'UEF',
+    'STRUCTURE',
+    'STRATEGIC',
+    'EXPERIMENTAL',
+    'INDIRECTFIRE',
+    'ARTILLERY',
+    #'DRAGBUILD',
+    'SIZE16',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    'SHOWATTACKRETICLE',
+    'DRAGBUILD',
+    'OVERLAYINDIRECTFIRE',
+    'SORTSTRATEGIC', #Ianz
+  },
+  Veteran = {
+    Level1 = 100, #50
+    Level2 = 200,
+    Level3 = 300,
+    Level4 = 400,
+    Level5 = 500,
+  },
+  Weapon = {
+    FireingRandomness = 0.15, #0.22
+  },
+  Wreckage = {
+    ReclaimTimeMultiplier = 4, #1
+  },
+}

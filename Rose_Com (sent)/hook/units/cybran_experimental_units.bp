@@ -1,0 +1,453 @@
+-- Cybran Monkeylord ------------------------------------------------------------------------------------------------
+#I wanted to return the ML to its previous super-destroyer state with a relative inability to turn so i increased its
+# cost, health, veterancy requirements and decreased its manuverability to make up for its death lazer.
+UnitBlueprint { Merge = true, BlueprintId = "url0402", #Monkeylord Experimental Spiderbot
+  AI = {
+    TargetBones = {
+      'Left_Turret',
+      'Right_Turret',
+      'Center_Turret',
+      'Right_Projectile01',
+      'Left_Projectile01',
+      'Right_Projectile02',
+      'Left_Projectile02',
+      'URL0402',
+      'Center_Turret', #(CBF)
+    },
+  },
+  Categories = {
+    'PRODUCTSC1',
+    'SELECTABLE',
+    'BUILTBYTIER3COMMANDER',
+    'BUILTBYTIER3ENGINEER',
+    'CYBRAN',
+    'MOBILE',
+    'LAND',
+    'EXPERIMENTAL',
+    'DIRECTFIRE',
+    'ANTIAIR',
+    'NEEDMOBILEBUILD',
+    'SONAR',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    #'DRAGBUILD',
+    'OVERLAYDIRECTFIRE',
+    'OVERLAYSONAR',
+    'OVERLAYANTIAIR',
+    'OVERLAYANTINAVY',
+    'SORTDEFENSE', #Ianz
+  },
+  Display = {
+    AnimationWalkRate = 2.1, #3.5
+  },
+  Defense = {
+    Health = 67500, #45000
+    MaxHealth = 67500,
+  },
+  Economy = {
+    BuildCostEnergy = 400000, #200000
+    BuildCostMass = 32000, #16000
+    BuildTime = 48000, #12000
+    MaintenanceConsumptionPerSecondEnergy = 500, #250
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Guard = false, #true
+      RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 2, #nil
+  },
+  Physics = {
+    MaxAcceleration = 1.3, #2.5
+    MaxSpeed = 1.7, #2.5
+    TurnRate = 20, #25
+  },
+  Veteran = {
+    Level1 = 50, #Vetarancy Levels x2
+    Level2 = 100,
+    Level3 = 150,
+    Level4 = 200,
+    Level5 = 250,
+  },
+  Weapon = {
+    {#Death Beam
+      MinRadius = 10, #4
+      TurretPitchRange = 20, #90
+      TurretPitchSpeed = 10, #20
+      TurretYawRange = 120, #180
+      TurretYawSpeed = 20, #40
+    },
+    {#Right Bolter
+      RangeCategory = 'UWRC_IndirectFire',
+    },
+    {#Left Bolter
+      RangeCategory = 'UWRC_IndirectFire',
+    },
+    {#AA Missile Right
+    },
+    {#AA Missile Left
+    },
+    {#Torpedoes
+    },
+    {#Death Explosion
+    },
+  },
+  Wreckage = {
+    ReclaimTimeMultiplier = 4, #1
+  },
+}
+
+-- Cybran Megalith --------------------------------------------------------------------------------------------------
+#I tried to make this one more of a naval experimental because the cybran did not really have one and it was very
+# redundant with the monkeylord on land.
+UnitBlueprint { Merge = true, BlueprintId = "xrl0403", #Megalith Experimental Megabot
+  Categories = {
+    'PRODUCTFA',
+    'SELECTABLE',
+    'BUILTBYTIER3COMMANDER',
+    'BUILTBYTIER3ENGINEER',
+    'CYBRAN',
+    'MOBILE',
+    'LAND',
+    'EXPERIMENTAL',
+    'CONSTRUCTION',
+    'DIRECTFIRE',
+    'ANTIAIR',
+    'NEEDMOBILEBUILD',
+    'SONAR',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    #'DRAGBUILD',
+    'SHOWQUEUE',
+    'OVERLAYANTIAIR',
+    'OVERLAYSONAR',
+    'OVERLAYANTINAVY',
+    'OVERLAYDEFENSE',
+    'OVERLAYDIRECTFIRE',
+    'SORTDEFENSE', #Ianz
+  },
+  Display = {
+    AnimationWalkRate = 2.7, #3.6
+  },
+  Economy = {
+    BuildCostEnergy = 600000, #393750 (+~50%)
+    BuildCostMass = 50000, #33750 (+~50%)
+    BuildRate = 200, #180
+    BuildTime = 67500, #16875 (X4)
+    MaxBuildDistance = 6, #1
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Guard = false, #true
+      RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 2, #nil
+  },
+  Physics = {
+    MaxAcceleration = 1.5, #2
+    MaxSpeed = 1.5, #2
+    MaxSpeedReverse = 0.75, #1
+    TurnRadius = 5, #15
+    TurnRate = 25, #45
+    WaterSpeedMultiplier = 1.75, #1.25
+  },
+  Veteran = {
+    Level1 = 75, #50
+    Level2 = 150,
+    Level3 = 225,
+    Level4 = 300,
+    Level5 = 375,
+  },
+  Weapon = {
+    { # Proton Cannon
+      BallisticArc = 'RULEUBA_LowArc', #'RULEUBA_None'
+      HeadingArcRange = 70, #55
+      MuzzleVelocity = 35, #65
+      ProjectileLifetime = 1.8, #(CBF)
+      RateOfFire = 0.4, #0.8
+      SlavedToBodyArcRange = 70, #50
+      TurretYawRange = 70, #55
+    },
+    { # Proton Cannon
+      BallisticArc = 'RULEUBA_LowArc', #'RULEUBA_None'
+      HeadingArcRange = 70, #55
+      MuzzleVelocity = 35, #65
+      ProjectileLifetime = 1.8, #(CBF)
+      RateOfFire = 0.4, #0.8
+      SlavedToBodyArcRange = 70, #50
+      TurretYawRange = 70, #65
+    },
+    { # Nanite Torpedo Launcher
+      Damage = 40, #20
+    },
+    { # Anti-Torpedo Flare
+    },
+    { # Electron Flak
+      Damage = 72, #18
+      DamageRadius = 4, #2
+      MaxRadius = 50, #40
+      MuzzleVelocity = 30, #20
+    },
+    { # Hack Peg (Unused)
+    },
+    { # Death Explosion
+    },
+  },
+  Wreckage = {
+    ReclaimTimeMultiplier = 4, #1
+  },
+}
+
+-- Crab Egg Units --------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "xrl0002", #Crab Egg Engineer
+  Audio = {
+    EggOpen = Sound {
+      Bank = 'XRL_Stream',
+      Cue = 'XRL_Crab_Egg_Open',
+      LodCutoff = 'UnitMove_LodCutoff',
+    },
+    EggSink = Sound {
+      Bank = 'XRL_Stream',
+      Cue = 'XRL_Crab_Sink',
+      LodCutoff = 'UnitMove_LodCutoff',
+    },
+  },
+  Categories = {
+    'PRODUCTFA',
+    #'SELECTABLE',
+    'CYBRAN',
+    'STRUCTURE',
+    'LAND',
+    'TECH3',
+    'CONSTRUCTION',
+    'FACTORY',
+    'RALLYPOINT',
+    'DRAGBUILD',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    'SHOWQUEUE',
+  },
+  Defense = {
+    Health = 100, #10
+    MaxHealth = 100,
+  },
+  Physics = {
+    FlattenSkirt = false, #true
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "xrl0003", #Crab Egg Brick
+  Categories = {
+    'PRODUCTFA',
+    #'SELECTABLE',
+    'CYBRAN',
+    'STRUCTURE',
+    'LAND',
+    'TECH3',
+    'CONSTRUCTION',
+    'FACTORY',
+    'RALLYPOINT',
+    'DRAGBUILD',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    'SHOWQUEUE',
+  },
+  Defense = {
+    Health = 100, #10
+    MaxHealth = 100,
+  },
+  Physics = {
+    FlattenSkirt = false, #true
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "xrl0004", #Crab Egg Flak
+  Categories = {
+    'PRODUCTFA',
+    #'SELECTABLE',
+    'CYBRAN',
+    'STRUCTURE',
+    'LAND',
+    'TECH2',
+    'CONSTRUCTION',
+    'FACTORY',
+    'RALLYPOINT',
+    'DRAGBUILD',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    'SHOWQUEUE',
+  },
+  Defense = {
+    Health = 100, #10
+    MaxHealth = 100,
+  },
+  Physics = {
+    FlattenSkirt = false, #true
+  },
+}
+UnitBlueprint { Merge = true, BlueprintId = "xrl0005", #Crab Egg Artillery
+  Categories = {
+    'PRODUCTFA',
+    #'SELECTABLE',
+    'CYBRAN',
+    'STRUCTURE',
+    'LAND',
+    'TECH3',
+    'CONSTRUCTION',
+    'FACTORY',
+    'RALLYPOINT',
+    'DRAGBUILD',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    'SHOWQUEUE',
+  },
+  Defense = {
+    Health = 100, #10
+    MaxHealth = 100,
+  },
+  Physics = {
+    FlattenSkirt = false, #true
+  },
+}
+
+-- Cybran Soul Ripper -----------------------------------------------------------------------------------------------
+#I made this one a lot slower like most of the experimentals i tried to make this one a little more deadly however
+# because it was a little to weak previously and it was only really good for raiding which is not the role of an
+# experimental
+UnitBlueprint { Merge = true, BlueprintId = "ura0401", #Soul Ripper Experimental Gunship
+  Air = {
+    AutoLandTime = 6, #1
+    KLift = 0.75, #1
+    MaxAirspeed = 5, #8
+    MinAirspeed = 2, #3
+  },
+  Defense = {
+    Health = 150000, #90000
+    MaxHealth = 150000, #90000
+  },
+  Categories = {
+    'PRODUCTSC1',
+    'SELECTABLE',
+    'BUILTBYTIER3COMMANDER',
+    'BUILTBYTIER3ENGINEER',
+    'CYBRAN',
+    'MOBILE',
+    'AIR',
+    'EXPERIMENTAL',
+    'GROUNDATTACK',
+    'NEEDMOBILEBUILD',
+    'ANTIAIR',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    #'DRAGBUILD',
+    'SHOWATTACKRETICLE',
+    'OVERLAYANTIAIR',
+    'OVERLAYDIRECTFIRE',
+    'CANNOTUSEAIRSTAGING',
+    'SORTDEFENSE', #Ianz
+  },
+  Economy = {
+    BuildCostEnergy = 975000, #650000
+    BuildCostMass = 60000, #40000
+    BuildTime = 90000, #30000
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Guard = false, #true
+      #RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 2, #nil
+  },
+  Veteran = {
+    Level1 = 60, #40
+    Level2 = 120,
+    Level3 = 180,
+    Level4 = 240,
+    Level5 = 300,
+  },
+  Weapon = {
+    { #Iridium Rocket Pack
+      RateOfFire = 1, #0.5
+    },
+    { #Iridium Rocket Pack
+      RateOfFire = 1, #0.5
+    },
+    { #Nanite Missile System
+      Damage = 300, #150
+    },
+    { #Nanite Missile System
+      Damage = 300, #150
+    },
+    { #Heavy Electron Bolter
+    },
+    { #Heavy Electron Bolter
+    },
+    { #Crash
+    },
+  },
+  Wreckage = {
+    ReclaimTimeMultiplier = 4, #1
+  },
+}
+
+-- Cybran Scathis ---------------------------------------------------------------------------------------------------
+#I reduced the cost of this one and reduced its power so the cybran have a 4th experimental. I increased the mobility
+# of the scathis so that it could live up to its name of a mobile artillery.
+UnitBlueprint { Merge = true, BlueprintId = "url0401", #Scathis Experimental Mobile Rapid-Fire Artillery
+  Categories = {
+    'PRODUCTSC1',
+    'SELECTABLE',
+    'BUILTBYTIER3COMMANDER',
+    'BUILTBYTIER3ENGINEER',
+    'CYBRAN',
+    'MOBILE',
+    'LAND',
+    'EXPERIMENTAL',
+    'INDIRECTFIRE',
+    'ARTILLERY',
+    'NEEDMOBILEBUILD',
+    'VISIBLETORECON',
+    'RECLAIMABLE',
+    'SHOWATTACKRETICLE',
+    #'DRAGBUILD',
+    'OVERLAYINDIRECTFIRE',
+    'SORTDEFENSE', #Ianz
+  },
+  Economy = {
+    BuildCostEnergy = 2997000, #5994000 (-50%)
+    BuildCostMass = 149850, #299700 (-~50%)
+    BuildTime = 99900, #99900
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Guard = false, #true
+      RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 2, #nil
+  },
+  Physics = {
+    MaxAcceleration = 1.25, #1
+    MaxBrake = 1.25, #1
+    MaxSpeed = 1.25, #1
+  },
+  Veteran = {
+    Level1 = 75, #50
+    Level2 = 150,
+    Level3 = 225,
+    Level4 = 300,
+    Level5 = 375,
+  },
+  Weapon = {
+    {
+      MaxRadius = 1500, #4000
+      MinRadius = 200, #100
+      MuzzleVelocity = 90, #160
+      MuzzleVelocityReduceDistance = 1500, #2350
+      TurretPitchRange = 80, #45
+      TurretPitchSpeed = 60, #30
+      WeaponUnpackAnimationRate = 2, #1
+    },
+  },
+  Wreckage = {
+    ReclaimTimeMultiplier = 4, #1
+  },
+}

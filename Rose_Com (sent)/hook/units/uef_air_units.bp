@@ -1,0 +1,345 @@
+-- UEF T1 Air Units -------------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "uea0101", #Hummingbird Air Scout
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildCostEnergy = 1200, #1600
+    BuildCostMass = 30, #40
+    BuildTime = 300, #400
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uea0102", #Cyclone Interceptor
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Weapon = {
+    {
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uea0103", #Scorcher Attack Bomber
+  Air = {
+    AutoLandTime = 4, #1
+    MaxAirspeed = 11, #10
+  },
+  Air = {
+    PredictAheadForBombDrop = 3, #(CBF)
+  },
+  Weapon = {
+    {
+      DoTTime = 3, #1.5
+      FiringTolerance = 6, #(CBF)
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uea0107", #C6 Courier Light Air Transport
+  Air = {
+    KTurn = 1.8, #1
+    KTurnDamping = 2.7, #4
+  },
+  Defense = {
+    AirThreatLevel = 2, #nil
+    Health = 750, MaxHealth = 750, #500
+  },
+  Economy = {
+    BuildCostMass = 160, #120
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 3, #2
+  },
+}
+
+-- UEF T2 Air Units -------------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "uea0104", #C14 Star Lifter Air Transport
+  Air = {
+    KTurn = 1.8, #1
+    KTurnDamping = 2.7, #4
+    MaxAirspeed = 11, #15
+  },
+  Defense = {
+    Health = 2525, MaxHealth = 2525, #1675
+  },
+  Economy = {
+    BuildCostMass = 480, #300
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Attack = false, #true
+      RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 3, #2
+  },
+  Weapon = {
+    { #Hells Fury Riot Gun
+      MuzzleVelocity = 40, #13
+    },
+    { #Hells Fury Riot Gun
+      MuzzleVelocity = 40, #13
+    },
+    { #Linked Railgun
+      MaxRadius = 30, #20
+    },
+    { #Linked Railgun
+      MaxRadius = 30, #20
+    },
+    { #Crash
+      Damage = 250, #25
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uea0203", #Stinger Gunship
+  Air = {
+    AutoLandTime = 6, #1
+    MaxAirspeed = 11, #12
+  },
+  Defense = {
+    Health = 980, #1100
+    MaxHealth = 980,
+  },
+  Economy = {
+    BuildCostEnergy = 5600, #6000
+    BuildCostMass = 280, #300
+    BuildTime = 1400, #2000
+  },
+  Weapon = {
+    {
+      AlwaysRecheckTarget = true, #nil
+      RateOfFire = 2.5, #3
+      TargetPriorities = {
+        'SPECIALHIGHPRI',
+        'MOBILE ANTIAIR', #Ianz
+        'SPECIALLOWPRI',
+        'ALLUNITS',
+      },
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uea0204", #Stork Torpedo Bomber
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildTime = 1200, #1600
+  },
+  Weapon = {
+    { #Torpedoes
+      FiringTolerance = 6, #(CBF)
+    },
+    { #Crash
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "dea0202", #Janus Multirole Fighter #ALSO SEE SCRIPT CHANGES
+  Air = {
+    AutoLandTime = 4, #1
+    PredictAheadForBombDrop = 3, #(CBF)
+  },
+  Economy = {
+    BuildCostEnergy = 12600, #8400
+  },
+  Weapon = {
+    { #AA RailGun
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+      TurretPitchRange = 55, #80
+    },
+    { #AA RailGun
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+      TurretPitchRange = 55, #80
+    },
+    { #Napalm Carpet Bomb
+      Damage = 8, #10
+      DoTTime = 5, #2.5
+      FiringTolerance = 6, #(CBF)
+    },
+    { #Crash
+    },
+  },
+}
+
+-- UEF T3 Air Units -------------------------------------------------------------------------------------------------
+
+UnitBlueprint { Merge = true, BlueprintId = "uea0302", #SR90 Blackbird Spy Plane
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildCostEnergy = 5250, #5000
+    BuildCostMass = 180, #195
+    BuildTime = 1200, #900
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uea0305", #Broadsword Heavy Gunship
+  Air = {
+    AutoLandTime = 6, #1
+  },
+  Economy = {
+    BuildCostEnergy = 37800, #35000
+  },
+  Weapon = {
+    { #Heavy Plasma Cannon
+      TargetPriorities = {
+        'SPECIALHIGHPRI',
+        'MOBILE ANTIAIR', #Ianz
+        'SPECIALLOWPRI',
+        'ALLUNITS',
+      },
+    },
+    { #AA Railgun
+      Damage = 10, #2
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+      RateOfFire = 1, #0.75
+    },
+    { #Crash
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uea0304", #Ambassador Strategic Bomber
+  Air = {
+    AutoLandTime = 4, #1
+    PredictAheadForBombDrop = 3, #(CBF)
+  },
+  Economy = {
+    BuildCostEnergy = 67200, #70000
+  },
+  Weapon = {
+    { #Bomb
+      FiringTolerance = 6, #(CBF)
+    },
+    { #AA
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+    { #AA
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "uea0303", #Wasp Air Superiority Fighter
+  Air = {
+    AutoLandTime = 4, #1
+  },
+  Economy = {
+    BuildCostEnergy = 21600, #20000
+    BuildCostMass = 480, #400
+    BuildTime = 3200, #3000
+  },
+  Weapon = {
+    { #Ginsu Pulse Beam
+      Damage = 150, #200
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+    { #Ginsu Pulse Beam
+      Damage = 150, #200
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+    { #Crash
+    },
+  },
+}
+
+UnitBlueprint { Merge = true, BlueprintId = "xea0306", #Continental Heavy Air Transport
+  Air = {
+    KTurn = 1.8, #1
+    KTurnDamping = 2.7, #4
+    MaxAirspeed = 12, #15
+  },
+  Defense = {
+    Shield = {
+      ShieldRegenRate = 50, #30
+      ShieldRegenStartTime = 3, #1
+    },
+  },
+  Economy = {
+    BuildCostEnergy = 38000, #28125
+    BuildCostMass = 1520, #2000
+    BuildTime = 7600, #7500
+  },
+  General = {
+    CommandCaps = {
+      RULEUCC_Attack = false, #true
+      RULEUCC_Patrol = false, #true
+    },
+    SelectionPriority = 3, #2
+  },
+  Veteran = {
+    Level1 = 6, #3
+    Level2 = 12,
+    Level3 = 18,
+    Level4 = 24,
+    Level5 = 30,
+  },
+  Weapon = {
+    { #Plasma Cannon
+      MuzzleVelocity = 40, #12
+    },
+    { #Plasma Cannon
+      MuzzleVelocity = 40, #12
+    },
+    { #AA Missile
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+    { #AA Missile
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+    { #AA Missile
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+    { #AA Missile
+      FireTargetLayerCapsTable = {
+        Air = 'Air', #'Air|Land'
+        Land = 'Air', #'Air|Land'
+      },
+    },
+    { #Crash
+      Damage = 1000, #25
+    },
+  },
+}
