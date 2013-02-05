@@ -89,6 +89,11 @@ UnitBlueprint { Merge = true, BlueprintId="ueb2303", #Klink Hammer Artillery Ins
       RackRecoilDistance = -1, #-2.5
     },
   },
+  General = {
+	ToggleCaps = {
+		RULEUTC_SpecialToggle = true,
+	},
+  },
 }
 
 UnitBlueprint { Merge = true, BlueprintId = "ueb2204", #Air Cleaner Anti-Air Flak Artillery
