@@ -2,22 +2,33 @@ local oldUEB2303 = UEB2303
 
 UEB2303 = Class(oldUEB2303) {
 	
-	
-	OnScriptBitSet = function(self, bit)
-        if bit == 1 then 
-			self:GetWeaponByLabel('MainGun').BallisticArc = 'RULEUBA_HighArc'
-			self:GetWeaponByLabel('MainGun'):SetupTurret()
-			LOG(self:GetWeaponByLabel('MainGun').BallisticArc)
-        end
-    end,
+	onCreate = function(self)
+		oldUEB2303:onCreate()
+		self:SetWeaponEnabledByLabel('SecondaryGun', false)
+	end,
 	
 	OnScriptBitClear = function(self, bit)
         if bit == 1 then 
-			self:GetWeaponByLabel('MainGun').BallisticArc = 'RULEUBA_LowArc'
-			self:GetWeaponByLabel('MainGun'):SetupTurret()
-			LOG(self:GetWeaponByLabel('MainGun').BallisticArc)
+			self:SetWeaponEnabledByLabel('SecondaryGun', false)
+            self:SetWeaponEnabledByLabel('MainGun', true)
+            self:GetWeaponManipulatorByLabel('MainGun'):SetHeadingPitch( self:GetWeaponManipulatorByLabel('SecondaryGun'):GetHeadingPitch() )
         end
     end,
+	
+	OnScriptBitSet = function(self, bit)
+        if bit == 1 then 
+			self:SetWeaponEnabledByLabel('SecondaryGun', true)
+            self:SetWeaponEnabledByLabel('MainGun', false)
+            self:GetWeaponManipulatorByLabel('SecondaryGun'):SetHeadingPitch( self:GetWeaponManipulatorByLabel('MainGun'):GetHeadingPitch() )
+        end
+    end,
+	
+	Weapons = {
+        MainGun = Class(TIFArtilleryWeapon) {
+        },
+		SecondaryGun = Class(TIFArtilleryWeapon) {
+        },
+    },
 }
 
 TypeClass = UEB2303
