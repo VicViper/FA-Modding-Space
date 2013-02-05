@@ -83,15 +83,16 @@ UnitBlueprint { Merge = true,  BlueprintId="xeb2306", #Ravager T3 Point Defense
 UnitBlueprint { Merge = true, BlueprintId="ueb2303", #Klink Hammer Artillery Installation
   Weapon = {
     {
-      BallisticArc = 'RULEUBA_HighArc', #'RULEUBA_LowArc'
-      MinRadius = 25, #5
+      BallisticArc = 'RULEUBA_LowArc',
+      MinRadius = 15, #5
+      TurretPitchRange = 80,
       MuzzleVelocityReduceDistance = 120, #nil
       RackRecoilDistance = -1, #-2.5
     },
   },
   General = {
 	ToggleCaps = {
-		RULEUTC_SpecialToggle = true,
+		RULEUTC_WeaponToggle = true,
 	},
   },
 }
