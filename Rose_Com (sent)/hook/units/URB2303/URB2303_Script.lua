@@ -1,6 +1,4 @@
 local oldUEB2303 = URB2303
-local CStructureUnit = import('/lua/cybranunits.lua').CStructureUnit
-local CIFArtilleryWeapon = import('/lua/cybranweapons.lua').CIFArtilleryWeapon
 
 URB2303 = Class(oldUEB2303) {
 	

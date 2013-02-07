@@ -236,7 +236,14 @@ UnitBlueprint { Merge = true, BlueprintId="ueb2303", #Klink Hammer Artillery Ins
 	ToggleCaps = {
 		RULEUTC_WeaponToggle = true,
 	},
+	OrderOverrides = {
+		RULEUTC_WeaponToggle = {
+			bitmapId = 'toggle-weapon',
+			helpText = 'Toggle Firing Arc',
+		},
+	},
   },
+  
 }
 
 UnitBlueprint { Merge = true, BlueprintId = "ueb2204", #Air Cleaner Anti-Air Flak Artillery

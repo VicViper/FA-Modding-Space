@@ -107,10 +107,16 @@ UnitBlueprint { Merge = true, BlueprintId = "urb2303", #Gunther Artillery Instal
 	ToggleCaps = {
 		RULEUTC_WeaponToggle = true,
 	},
+		OrderOverrides = {
+		RULEUTC_WeaponToggle = {
+			bitmapId = 'toggle-weapon',
+			helpText = 'Toggle Firing Arc',
+		},
+	},
   },
   Weapon = {
     {
-      BallisticArc = 'RULEUBA_HighArc',
+      BallisticArc = 'RULEUBA_LowArc',
       MinRadius = 15, #5
       MuzzleVelocityReduceDistance = 120, #nil
     },
@@ -124,7 +130,7 @@ UnitBlueprint { Merge = true, BlueprintId = "urb2303", #Gunther Artillery Instal
                     LodCutoff = 'Weapon_LodCutoff',
                 },
             },
-            BallisticArc = 'RULEUBA_LowArc',
+            BallisticArc = 'RULEUBA_HighArc',
             CollideFriendly = false,
             Damage = 1750,
             DamageFriendly = true,

@@ -1,8 +1,6 @@
-local oldXB2303 = XSB2303
-local SStructureUnit = import('/lua/seraphimunits.lua').SStructureUnit
-local SIFZthuthaamArtilleryCannon = import('/lua/seraphimweapons.lua').SIFZthuthaamArtilleryCannon
+local oldXSB2303 = XSB2303
 
-XSB2303 = Class(oldUEB2303) {
+XSB2303 = Class(oldXSB2303) {
 	
 	onCreate = function(self)
 		oldUEB2303:onCreate()

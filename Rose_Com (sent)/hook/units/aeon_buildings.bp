@@ -122,10 +122,16 @@ UnitBlueprint { Merge = true, BlueprintId = "uab2303", #Miasma Artillery Install
 	ToggleCaps = {
 		RULEUTC_WeaponToggle = true,
 	},
+		OrderOverrides = {
+		RULEUTC_WeaponToggle = {
+			bitmapId = 'toggle-weapon',
+			helpText = 'Toggle Firing Arc',
+		},
+	},
   },
   Weapon = {
     {
-      BallisticArc = 'RULEUBA_HighArc', #'RULEUBA_HighArc'
+      BallisticArc = 'RULEUBA_LowArc', #'RULEUBA_HighArc'
       Damage = 285, #575
       DamageRadius = 3.5, #3
       DoTPulses = 10, #5
@@ -144,7 +150,7 @@ UnitBlueprint { Merge = true, BlueprintId = "uab2303", #Miasma Artillery Install
                     LodCutoff = 'Weapon_LodCutoff',
                 },
             },
-            BallisticArc = 'RULEUBA_LowArc',
+            BallisticArc = 'RULEUBA_HighArc',
             CollideFriendly = false,
             Damage = 285,
             DamageFriendly = true,

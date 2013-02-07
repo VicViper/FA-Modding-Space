@@ -89,10 +89,16 @@ UnitBlueprint { Merge = true, BlueprintId = "xsb2303", #Zthuthaam Artillery Inst
 	ToggleCaps = {
 		RULEUTC_WeaponToggle = true,
 	},
+		OrderOverrides = {
+		RULEUTC_WeaponToggle = {
+			bitmapId = 'toggle-weapon',
+			helpText = 'Toggle Firing Arc',
+		},
+	},
   },	
   Weapon = {
     {
-      BallisticArc = 'RULEUBA_HighArc',  #'RULEUBA_LowArc'
+      BallisticArc = 'RULEUBA_LowArc',  #'RULEUBA_LowArc'
       MinRadius = 15, #5
       MuzzleVelocityReduceDistance = 120, #Null
       TurretPitch = 0, #0
@@ -129,7 +135,7 @@ UnitBlueprint { Merge = true, BlueprintId = "xsb2303", #Zthuthaam Artillery Inst
                     LodCutoff = 'Weapon_LodCutoff',
                 },
             },
-            BallisticArc = 'RULEUBA_LowArc',
+            BallisticArc = 'RULEUBA_HighArc',
             CollideFriendly = false,
             Damage = 2400,
             DamageFriendly = true,

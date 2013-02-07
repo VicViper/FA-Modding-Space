@@ -1,6 +1,4 @@
 local oldUEB2303 = UEB2303
-local TStructureUnit = import('/lua/terranunits.lua').TStructureUnit
-local TIFArtilleryWeapon = import('/lua/terranweapons.lua').TIFArtilleryWeapon
 
 UEB2303 = Class(oldUEB2303) {
 	
