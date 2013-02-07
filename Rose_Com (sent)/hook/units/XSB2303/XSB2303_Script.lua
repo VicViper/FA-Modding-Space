@@ -1,10 +1,9 @@
-local oldUEB2303 = UEB2303
+local oldXSB2303 = XSB2303
 
-UEB2303 = Class(oldUEB2303) {
+XSB2303 = Class(oldXSB2303) {
 	
 	onCreate = function(self)
 		oldUEB2303:onCreate()
-		
 		self:SetWeaponEnabledByLabel('SecondaryGun', false)
 	end,
 	
@@ -25,11 +24,11 @@ UEB2303 = Class(oldUEB2303) {
     end,
 	
 	Weapons = {
-        MainGun = Class(TIFArtilleryWeapon) {
+        MainGun = Class(SIFZthuthaamArtilleryCannon) {
         },
-		SecondaryGun = Class(TIFArtilleryWeapon) {
+		SecondaryGun = Class(SIFZthuthaamArtilleryCannon) {
         },
     },
 }
 
-TypeClass = UEB2303
+TypeClass = XSB2303
