@@ -59,6 +59,7 @@ UnitBlueprint { Merge = true, BlueprintId = "xsb2101", #T1 Point Defense
       },
       RateOfFire = 1.5, #3
     },
+	
   },
 }
 
@@ -83,15 +84,118 @@ UnitBlueprint { Merge = true, BlueprintId = "xsb2301", #Uttasshala Heavy Point D
   },
 }
 
-UnitBlueprint { Merge = true, BlueprintId = "xsb2303", #Zthuthaam Artillery Installation	
+UnitBlueprint { Merge = true, BlueprintId = "xsb2303", #Zthuthaam Artillery Installation
+ General = {
+	ToggleCaps = {
+		RULEUTC_WeaponToggle = true,
+	},
+  },	
   Weapon = {
     {
       BallisticArc = 'RULEUBA_HighArc',  #'RULEUBA_LowArc'
-      MinRadius = 25, #5
+      MinRadius = 15, #5
       MuzzleVelocityReduceDistance = 120, #Null
       TurretPitch = 0, #0
       TurretPitchRange = 90, #80
     },
+	{
+            AboveWaterTargetsOnly = true,
+            ArtilleryShieldBlocks = true,
+            Audio = {
+                Fire = Sound {
+                    Bank = 'XSB_Weapon',
+                    Cue = 'XSB2303_Zthuthaam_Cannon',
+                    LodCutoff = 'Weapon_LodCutoff',
+                },
+            },
+            BarrelStart = {
+                Fire = Sound {
+                    Bank = 'XSB',
+                    Cue = 'XSB2303_Turret_Artillery_Start',
+                    LodCutoff = 'Weapon_LodCutoff',
+                },
+            },
+            BarrelLoop = {
+                Fire = Sound {
+                    Bank = 'XSB',
+                    Cue = 'XSB2303_Turret_Artillery_Loop',
+                    LodCutoff = 'Weapon_LodCutoff',
+                },
+            },
+            MuzzleChargeStart = {
+                Fire = Sound {
+                    Bank = 'XSB_Weapon',
+                    Cue = 'XSB2303_Charge',
+                    LodCutoff = 'Weapon_LodCutoff',
+                },
+            },
+            BallisticArc = 'RULEUBA_LowArc',
+            CollideFriendly = false,
+            Damage = 2400,
+            DamageFriendly = true,
+            DamageRadius = 3,
+            DamageType = 'Normal',
+            DisplayName = 'Zthuthaam Artillery Cannon',
+            EnergyDrainPerSecond = 130,
+            EnergyRequired = 1300,
+            FireTargetLayerCapsTable = {
+                Land = 'Land|Water|Seabed',
+                Water = 'Land|Water|Seabed',
+            },
+            FiringRandomness = 1.5,
+            FiringTolerance = 1,
+            Label = 'SecondaryGun',
+            MaxRadius = 128,
+            MinRadius = 15,
+            MuzzleChargeDelay = 1,
+            MuzzleSalvoChargeDelay = 0,
+            MuzzleSalvoDelay = 0,
+            MuzzleSalvoSize = 1,
+			MuzzleVelocityReduceDistance = 120, #Null
+            MuzzleVelocity = 26.13,
+            ProjectileId = '/projectiles/SIFZthuthaamArtilleryShell02/SIFZthuthaamArtilleryShell02_proj.bp',
+            ProjectilesPerOnFire = 1,
+            RackBones = {
+                {
+                    MuzzleBones = {
+                        'Turret_Muzzle',
+                    },
+                    RackBone = 'Turret_Recoil',
+                },
+            },
+            RackFireTogether = false,
+            RackRecoilDistance = -2,
+            RackReloadTimeout = 10,
+            RackSalvoChargeTime = 0,
+            RackSalvoFiresAfterCharge = false,
+            RackSalvoReloadTime = 0,
+            RackSalvoSize = 1,
+            RackSlavedToTurret = false,
+            RangeCategory = 'UWRC_IndirectFire',
+            RateOfFire = 0.05,
+            RenderFireClock = true,
+            TargetCheckInterval = 5,
+            TargetPriorities = {
+                'SPECIALHIGHPRI',
+                'SPECIALLOWPRI',
+                'ALLUNITS',
+            },
+            TargetRestrictDisallow = 'UNTARGETABLE',
+            TurretBoneMuzzle = 'Turret_Muzzle',
+            TurretBonePitch = 'Turret_Recoil',
+            TurretBoneYaw = 'Turret',
+            TurretDualManipulators = false,
+            TurretPitch = 0,
+            TurretPitchRange = 90,
+            TurretPitchSpeed = 6,
+            TurretYaw = 0,
+            TurretYawRange = 180,
+            TurretYawSpeed = 6,
+            Turreted = true,
+            WeaponCategory = 'Artillery',
+            WeaponRepackTimeout = 0,
+            WeaponUnpacks = false,
+        },
   },
 }
 
