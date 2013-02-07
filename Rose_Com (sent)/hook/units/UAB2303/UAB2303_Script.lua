@@ -1,4 +1,6 @@
 local oldUEB2303 = UAB2303
+local AStructureUnit = import('/lua/aeonunits.lua').AStructureUnit
+local AIFArtilleryMiasmaShellWeapon = import('/lua/aeonweapons.lua').AIFArtilleryMiasmaShellWeapon
 
 UAB2303 = Class(oldUEB2303) {
 	
@@ -24,9 +26,9 @@ UAB2303 = Class(oldUEB2303) {
     end,
 	
 	Weapons = {
-        MainGun = Class(TIFArtilleryWeapon) {
+        MainGun = Class(AIFArtilleryMiasmaShellWeapon) {
         },
-		SecondaryGun = Class(TIFArtilleryWeapon) {
+		SecondaryGun = Class(AIFArtilleryMiasmaShellWeapon) {
         },
     },
 }

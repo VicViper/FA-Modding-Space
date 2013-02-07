@@ -1,4 +1,6 @@
 local oldXB2303 = XSB2303
+local SStructureUnit = import('/lua/seraphimunits.lua').SStructureUnit
+local SIFZthuthaamArtilleryCannon = import('/lua/seraphimweapons.lua').SIFZthuthaamArtilleryCannon
 
 XSB2303 = Class(oldUEB2303) {
 	
@@ -24,9 +26,9 @@ XSB2303 = Class(oldUEB2303) {
     end,
 	
 	Weapons = {
-        MainGun = Class(TIFArtilleryWeapon) {
+        MainGun = Class(SIFZthuthaamArtilleryCannon) {
         },
-		SecondaryGun = Class(TIFArtilleryWeapon) {
+		SecondaryGun = Class(SIFZthuthaamArtilleryCannon) {
         },
     },
 }

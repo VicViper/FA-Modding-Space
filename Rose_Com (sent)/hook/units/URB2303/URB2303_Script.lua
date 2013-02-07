@@ -1,4 +1,6 @@
 local oldUEB2303 = URB2303
+local CStructureUnit = import('/lua/cybranunits.lua').CStructureUnit
+local CIFArtilleryWeapon = import('/lua/cybranweapons.lua').CIFArtilleryWeapon
 
 URB2303 = Class(oldUEB2303) {
 	
@@ -24,9 +26,9 @@ URB2303 = Class(oldUEB2303) {
     end,
 	
 	Weapons = {
-        MainGun = Class(TIFArtilleryWeapon) {
+        MainGun = Class(CIFArtilleryWeapon) {
         },
-		SecondaryGun = Class(TIFArtilleryWeapon) {
+		SecondaryGun = Class(CIFArtilleryWeapon) {
         },
     },
 }
