@@ -4,7 +4,7 @@ local BuffDefinitions = import('/lua/sim/BuffDefinitions.lua')
 #local Entity = import('/lua/sim/Entity.lua').Entity
 #local Weapon = import('/lua/sim/Weapon.lua').Weapon
 local Game = import('/lua/game.lua')
-local BuffFieldBlueprints = import('/mods/Ianz_Mod/hook/lua/BuffFieldDefinitions.lua').BuffFieldBlueprints
+local BuffFieldBlueprints = import(Game.Ianz_Path..'/hook/lua/BuffFieldDefinitions.lua').BuffFieldBlueprints
 
 # READ for modders - buff fields.txt BEFORE USING THIS!!
 
