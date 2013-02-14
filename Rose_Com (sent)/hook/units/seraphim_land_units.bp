@@ -6,8 +6,8 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0105", #T1 Engineer
   },
   General = {
     SelectionPriority = 4, #3
-	StrategicIconName = 'icon_hover1_engineer',
   },
+  StrategicIconName = 'icon_hover1_engineer',
   Physics = {
     BackUpDistance = 3, #4
     MaxAcceleration = 3, #1.9
@@ -25,8 +25,9 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0208", #T2 Engineer
   },
   General = {
     SelectionPriority = 4, #3
-	StrategicIconName = 'icon_hover2_engineer',
+	
   },
+  StrategicIconName = 'icon_hover2_engineer',
   Physics = {
     BackUpDistance = 3, #4
     MaxAcceleration = 3, #1.9
@@ -47,8 +48,9 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0309", #T3 Engineer
   },
   General = {
     SelectionPriority = 4, #3
-	StrategicIconName = 'icon_hover3_engineer',
+	
   },
+  StrategicIconName = 'icon_hover3_engineer',
   Physics = {
     BackUpDistance = 3, #4
     MaxAcceleration = 3, #1.9
@@ -93,8 +95,9 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0103", #Zthuee Mobile Light Arti
       TurretYawRange = 180, #45
     },
 	General = {
-	StrategicIconName = 'icon_hover1_artillery',
+	
   },
+  StrategicIconName = 'icon_hover1_artillery',
 }
 
 UnitBlueprint { Merge = true, BlueprintId = "xsl0201", #Thaam Meduim Tank
@@ -249,8 +252,9 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0307", #Athanah Mobile Shield Ge
     MaxSpeed = 3.8, #4
   },
      General = {
-	StrategicIconName = 'icon_hover3_shield',
+	
   },
+  StrategicIconName = 'icon_hover3_shield',
 }
 
 UnitBlueprint { Merge = true, BlueprintId = "xsl0303", #Othuum Siege Tank
