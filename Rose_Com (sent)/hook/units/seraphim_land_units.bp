@@ -1,5 +1,5 @@
 -- Seraphim Engineering Land Units ----------------------------------------------------------------------------------
-local Game = import('/lua/game.lua')
+#local Game = import('/lua/game.lua')
 UnitBlueprint { Merge = true, BlueprintId = "xsl0105", #T1 Engineer
   Categories = {
     'SORTDEFENSE',
@@ -130,7 +130,7 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0104", #Ia-istle Mobile Anti-Air
     MaxHealth = 140,
   },
   Display = {
-    AnimationWalk = Game.Ianz_Path..'/mods/Ianz_Mod/hook/units/XSL0104/XSL0104_Awalk01.sca', #(CBF)
+    #AnimationWalk = Game.Ianz_Path..'/units/XSL0104/XSL0104_Awalk01.sca', #(CBF) don't change the walk for now
   },
   StrategicIconName = 'icon_bot1_antiair', #'icon_land1_antiair'
   Weapon = {
