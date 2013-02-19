@@ -5,7 +5,19 @@
 --*
 --* Copyright © 2005 Gas Powered Games, Inc.  All rights reserved.
 --*****************************************************************************
-local Game = import('/lua/game.lua')
+do
+	local Rose_ModUID = '6ba7fa0e-e713-4086-808d-7e659bf9cc28'
+	function GetActiveModLocation( mod_Id )
+		for k, mod in __active_mods do
+			if  mod_Id == mod.uid then
+				return mod.location
+			end
+		end
+		WARN("Unable to get mod directory! Wrong or missing UID. Searched for UID "..repr(mod_Id))
+		return nil
+	end
+	Ianz_Path = GetActiveModLocation(Rose_ModUID)
+end
 local UIUtil = import('/lua/ui/uiutil.lua')
 local LayoutHelpers = import('/lua/maui/layouthelpers.lua')
 local GameCommon = import('/lua/ui/game/gamecommon.lua')
@@ -180,16 +192,16 @@ function UpdateWindow(info)
         local bp = __blueprints[info.blueprintId]
         if DiskGetFileInfo('/textures/ui/common/icons/units/'..info.blueprintId..'_icon.dds') then
             controls.icon:SetTexture('/textures/ui/common/icons/units/'..info.blueprintId..'_icon.dds')
-        elseif DiskGetFileInfo(Game.Ianz_Path..'/textures/ui/common/game/strategicicons/'..bp.StrategicIconName..'_icon.dds') then
-			controls.stratIcon:SetTexture(Game.Ianz_Path..'/textures/ui/common/game/strategicicons/'..bp.StrategicIconName..'_icon.dds')
+        elseif DiskGetFileInfo(Ianz_Path..'/textures/ui/common/game/strategicicons/'..bp.StrategicIconName..'_icon.dds') then
+			controls.stratIcon:SetTexture(Ianz_Path..'/textures/ui/common/game/strategicicons/'..bp.StrategicIconName..'_icon.dds')
 		else
             controls.icon:SetTexture('/textures/ui/common/game/unit_view_icons/unidentified.dds')
         end
 		
         if DiskGetFileInfo('/textures/ui/common/game/strategicicons/'..bp.StrategicIconName..'_selected.dds') then
             controls.stratIcon:SetTexture('/textures/ui/common/game/strategicicons/'..bp.StrategicIconName..'_selected.dds')
-        elseif DiskGetFileInfo(Game.Ianz_Path..'/textures/ui/common/game/strategicicons/'..bp.StrategicIconName..'_selected.dds') then
-			controls.stratIcon:SetTexture(Game.Ianz_Path..'/textures/ui/common/game/strategicicons/'..bp.StrategicIconName..'_selected.dds')
+        elseif DiskGetFileInfo(Ianz_Path..'/textures/ui/common/game/strategicicons/'..bp.StrategicIconName..'_selected.dds') then
+			controls.stratIcon:SetTexture(Ianz_Path..'/textures/ui/common/game/strategicicons/'..bp.StrategicIconName..'_selected.dds')
 		else
             controls.stratIcon:SetSolidColor('00000000')
         end

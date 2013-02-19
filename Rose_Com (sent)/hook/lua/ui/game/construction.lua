@@ -5,7 +5,20 @@
 #*
 #* Copyright © 2005 Gas Powered Games, Inc.  All rights reserved.
 #*****************************************************************************
-local Game = import('/lua/game.lua')
+
+do
+	local Rose_ModUID = '6ba7fa0e-e713-4086-808d-7e659bf9cc28'
+	function GetActiveModLocation( mod_Id )
+		for k, mod in __active_mods do
+			if  mod_Id == mod.uid then
+				return mod.location
+			end
+		end
+		WARN("Unable to get mod directory! Wrong or missing UID. Searched for UID "..repr(mod_Id))
+		return nil
+	end
+	Ianz_Path = GetActiveModLocation(Rose_ModUID)
+end
 local UIUtil = import('/lua/ui/uiutil.lua')
 local LayoutHelpers = import('/lua/maui/layouthelpers.lua')
 local Group = import('/lua/maui/group.lua').Group
@@ -399,8 +412,8 @@ function CommonLogic()
                     control.StratIcon:SetTexture('/textures/ui/common/game/strategicicons/'..iconName..'_rest.dds')
                     control.StratIcon.Height:Set(control.StratIcon.BitmapHeight)
                     control.StratIcon.Width:Set(control.StratIcon.BitmapWidth)
-				elseif DiskGetFileInfo(Game.Ianz_Path..'/textures/ui/common/game/strategicicons/'..iconName..'_selected.dds') then
-					control.stratIcon:SetTexture(Game.Ianz_Path..'/textures/ui/common/game/strategicicons/'..iconName..'_selected.dds')
+				elseif DiskGetFileInfo(Ianz_Path..'/textures/ui/common/game/strategicicons/'..iconName..'_selected.dds') then
+					control.stratIcon:SetTexture(Ianz_Path..'/textures/ui/common/game/strategicicons/'..iconName..'_selected.dds')
 					control.StratIcon.Height:Set(control.StratIcon.BitmapHeight)
                     control.StratIcon.Width:Set(control.StratIcon.BitmapWidth)
                 else
