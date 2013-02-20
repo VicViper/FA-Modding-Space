@@ -1,12 +1,15 @@
 -- Aeon Engineering Land Units ----------------------------------------------------
 
+
 UnitBlueprint { Merge = true, BlueprintId = "ual0105", #T1 Engineer
   Categories = {
     'SORTECONOMY', #Ianz
   },
   General = {
     SelectionPriority = 4, #3
+	
   },
+  StrategicIconName = 'icon_hover1_engineer',
   Physics = {
     BackUpDistance = 3, #4
     MaxAcceleration = 3, #1.9
@@ -24,7 +27,9 @@ UnitBlueprint { Merge = true, BlueprintId = "ual0208", #T2 Engineer
   },
   General = {
     SelectionPriority = 4, #3
+	
   },
+  StrategicIconName = 'icon_hover2_engineer',
   Physics = {
     BackUpDistance = 3, #0
     MaxAcceleration = 3, #1.9
@@ -45,7 +50,9 @@ UnitBlueprint { Merge = true, BlueprintId = "ual0309", #T3 Engineer
   },
   General = {
     SelectionPriority = 4, #3
+	
   },
+  StrategicIconName = 'icon_hover3_engineer',
   Physics = {
     BackUpDistance = 3, #4
     MaxAcceleration = 3, #1.9
@@ -67,6 +74,10 @@ UnitBlueprint { Merge = true, BlueprintId = "ual0101", #Spirit Land Scout
     {
       Damage = 8, #2
     },
+	General = {
+		
+	},
+	StrategicIconName = 'icon_hover1_intel',
   },
 }
 
@@ -90,6 +101,10 @@ UnitBlueprint { Merge = true, BlueprintId = "ual0201", #Aurora Light Tank
   Physics = {
     Elevation = 0.15, #0.25
   },
+   General = {
+	
+  },
+  StrategicIconName = 'icon_hover2_directfire',
   SelectionSizeX = 0.4, #0.5
   SelectionSizeZ = 0.56, #0.7
   SizeX = 0.56, #0.7
@@ -173,6 +188,10 @@ UnitBlueprint { Merge = true, BlueprintId = "ual0307", #Asylum Mobile Shield Gen
     MaxBrake = 3.8, #4
     MaxSpeed = 3.8, #4
   },
+   General = {
+	
+  },
+  StrategicIconName = 'icon_hover1_shield',
 }
 
 UnitBlueprint { Merge = true, BlueprintId = "ual0205", #Ascendant Mobile Anti-Air Flak Artillery
@@ -190,6 +209,10 @@ UnitBlueprint { Merge = true, BlueprintId = "ual0205", #Ascendant Mobile Anti-Ai
       RateOfFire = 1, #2
     },
   },
+  General = {
+	
+  },
+  StrategicIconName = 'icon_hover1_antiair',
 }
 
 -- Aeon T3 Land Units ---------------------------------------------------------------------------------

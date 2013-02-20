@@ -1,5 +1,5 @@
 -- Seraphim Engineering Land Units ----------------------------------------------------------------------------------
-local Game = import('/lua/game.lua')
+#local Game = import('/lua/game.lua')
 UnitBlueprint { Merge = true, BlueprintId = "xsl0105", #T1 Engineer
   Categories = {
     'SORTDEFENSE',
@@ -7,6 +7,7 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0105", #T1 Engineer
   General = {
     SelectionPriority = 4, #3
   },
+  StrategicIconName = 'icon_hover1_engineer',
   Physics = {
     BackUpDistance = 3, #4
     MaxAcceleration = 3, #1.9
@@ -24,7 +25,9 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0208", #T2 Engineer
   },
   General = {
     SelectionPriority = 4, #3
+	
   },
+  StrategicIconName = 'icon_hover2_engineer',
   Physics = {
     BackUpDistance = 3, #4
     MaxAcceleration = 3, #1.9
@@ -45,7 +48,9 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0309", #T3 Engineer
   },
   General = {
     SelectionPriority = 4, #3
+	
   },
+  StrategicIconName = 'icon_hover3_engineer',
   Physics = {
     BackUpDistance = 3, #4
     MaxAcceleration = 3, #1.9
@@ -89,6 +94,10 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0103", #Zthuee Mobile Light Arti
     Weapon = {
       TurretYawRange = 180, #45
     },
+	General = {
+	
+  },
+  StrategicIconName = 'icon_hover1_artillery',
 }
 
 UnitBlueprint { Merge = true, BlueprintId = "xsl0201", #Thaam Meduim Tank
@@ -121,7 +130,7 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0104", #Ia-istle Mobile Anti-Air
     MaxHealth = 140,
   },
   Display = {
-    AnimationWalk = Game.Ianz_Path..'/mods/Ianz_Mod/hook/units/XSL0104/XSL0104_Awalk01.sca', #(CBF)
+    #AnimationWalk = Game.Ianz_Path..'/units/XSL0104/XSL0104_Awalk01.sca', #(CBF) don't change the walk for now
   },
   StrategicIconName = 'icon_bot1_antiair', #'icon_land1_antiair'
   Weapon = {
@@ -154,6 +163,9 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0203", #Yenzyne Hover Tank
       },
       RateOfFire = 0.3, #0.25
     },
+  },
+     General = {
+	StrategicIconName = 'icon_hover2_directfire',
   },
 }
 
@@ -239,6 +251,10 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0307", #Athanah Mobile Shield Ge
     MaxBrake = 3.8, #4
     MaxSpeed = 3.8, #4
   },
+     General = {
+	
+  },
+  StrategicIconName = 'icon_hover3_shield',
 }
 
 UnitBlueprint { Merge = true, BlueprintId = "xsl0303", #Othuum Siege Tank
