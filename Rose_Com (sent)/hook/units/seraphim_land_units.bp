@@ -7,7 +7,7 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0105", #T1 Engineer
   General = {
     SelectionPriority = 4, #3
   },
-  StrategicIconName = 'icon_hover1_engineer',
+  #StrategicIconName = 'icon_hover1_engineer', #Not going to apply this just yet
   Physics = {
     BackUpDistance = 3, #4
     MaxAcceleration = 3, #1.9
@@ -27,7 +27,7 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0208", #T2 Engineer
     SelectionPriority = 4, #3
 	
   },
-  StrategicIconName = 'icon_hover2_engineer',
+  #StrategicIconName = 'icon_hover2_engineer', #Not going to apply this just yet
   Physics = {
     BackUpDistance = 3, #4
     MaxAcceleration = 3, #1.9
@@ -50,7 +50,7 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0309", #T3 Engineer
     SelectionPriority = 4, #3
 	
   },
-  StrategicIconName = 'icon_hover3_engineer',
+  #StrategicIconName = 'icon_hover3_engineer', #Not going to apply this just yet
   Physics = {
     BackUpDistance = 3, #4
     MaxAcceleration = 3, #1.9
@@ -97,7 +97,7 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0103", #Zthuee Mobile Light Arti
 	General = {
 	
   },
-  StrategicIconName = 'icon_hover1_artillery',
+  StrategicIconName = 'icon_hover1_artillery', #'icon_land1_artillery'
 }
 
 UnitBlueprint { Merge = true, BlueprintId = "xsl0201", #Thaam Meduim Tank
@@ -164,9 +164,9 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0203", #Yenzyne Hover Tank
       RateOfFire = 0.3, #0.25
     },
   },
-     General = {
-	StrategicIconName = 'icon_hover2_directfire',
+  General = {
   },
+  StrategicIconName = 'icon_hover2_directfire', #'icon_land2_directfire'
 }
 
 UnitBlueprint { Merge = true, BlueprintId = "xsl0202", #Ilshavoh Assault Bot
@@ -229,6 +229,7 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0205", #Iashavoh Mobile Anti-Air
   Economy = {
     BuildCostEnergy = 1200, #800
   },
+  StrategicIconName = 'icon_hover2_antiair', #'icon_land2_antiair
   Weapon = {
     {
       MuzzleVelocity = 30, #20
@@ -254,7 +255,7 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0307", #Athanah Mobile Shield Ge
      General = {
 	
   },
-  StrategicIconName = 'icon_hover3_shield',
+  StrategicIconName = 'icon_hover3_shield', #'icon_land3_shield'
 }
 
 UnitBlueprint { Merge = true, BlueprintId = "xsl0303", #Othuum Siege Tank
@@ -295,6 +296,7 @@ UnitBlueprint { Merge = true, BlueprintId = "xsl0303", #Othuum Siege Tank
   Physics = {
       StandUpright = false, #(CBF)
   },
+  #StrategicIconName = 'icon_sub3_directfire', #This is submersible like the wagner
   Weapon = {
     { #Thau Cannon
       MaxRadius = 22, #25

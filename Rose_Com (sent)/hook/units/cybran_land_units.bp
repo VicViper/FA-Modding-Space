@@ -195,9 +195,8 @@ UnitBlueprint { Merge = true, BlueprintId = "url0203", #Cybran Wagner Amphibious
   Economy = {
     BuildCostMass = 330, #297
   },
-
-	StrategicIconName = 'icon_hover2_directfire',
-
+	#StrategicIconName = 'icon_sub2_directfire', #Cant use the hover unit icon, it is subsurface
+  #Plan on making a new icon
   SizeX = 1.08, #0.9 #///NEED TO CHANGE TRACKS///
   SizeY = 0.54, #0.45
   SizeZ = 1.32, #1.1
@@ -246,11 +245,6 @@ UnitBlueprint { Merge = true, BlueprintId = "url0202", #Rhino Heavy Tank
           },
         },
       },
-    },
-  },
-  Weapon = {
-    {
-      RackRecoilDistance = 0, #1
     },
   },
 }
@@ -421,6 +415,7 @@ UnitBlueprint { Merge = true, BlueprintId = "xrl0305", #The Brick Armored Assaul
   Physics = {
     MaxSpeedReverse = 0, #2
   },
+  StrategicIconName = 'icon_bot3_armored', #'icon_bot3_directfire'
   Weapon = {
     { #Heavy Disintegrator Pulse Laser
       FireTargetLayerCapsTable = {

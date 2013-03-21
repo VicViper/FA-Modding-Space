@@ -181,9 +181,7 @@ UnitBlueprint { Merge = true, BlueprintId = "uel0202", #UEF Pillar Heavy Tank
   },
 }
 
-UnitBlueprint {
-  Merge = true,
-  BlueprintId = "uel0203", #UEF Riptide Amphibious Tank
+UnitBlueprint { Merge = true, BlueprintId = "uel0203", #UEF Riptide Amphibious Tank
   Defense = {
     Health = 1500, #1700
     MaxHealth = 1500,
@@ -300,6 +298,7 @@ UnitBlueprint { Merge = true, BlueprintId = "xel0305", #UEF Perceval Armored Ass
   Physics = {
     MaxSpeedReverse = 0, #2
   },
+  StrategicIconName = 'icon_bot3_armored',
   SelectionSizeX = 0.7, #0.55
   SelectionSizeZ = 0.65, #0.5
   SizeX = 0.95, #0.8
